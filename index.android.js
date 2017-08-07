@@ -1,30 +1,41 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
+  Button,
+  TextInput,
   View
 } from 'react-native';
+import * as Api from './src/google-books-api.js';
+import {observer} from 'mobx-react/native';
+import {observable, action} from 'mobx';
 
+class Store {
+   @observable query =  '';
+   @action search = () => Api.search(this.query);
+}
+
+const store = new Store();
+
+@observer
 export default class library extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
+        <TextInput style={styles.query}
+          onChangeText={query => store.query = query}
+          value={store.query}
+        />
+        <Button
+           style={styles.button}
+           onPress={store.search}
+           color={styles.button.color}
+           title="Search"
+           accessibilityLabel="Search"
+         />
         <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+          To get started, enter book title and press Search.
         </Text>
       </View>
     );
@@ -38,16 +49,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  query: {
+     alignSelf: 'stretch',
+     height: 40,
+     marginHorizontal: 20,
+     // borderColor: 'gray',
+     // borderWidth: 1
+  },
+  button: {
+    flex: 1,
+    color: "#841584"
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-  },
+  }
 });
 
 AppRegistry.registerComponent('library', () => library);
