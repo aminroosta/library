@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import co from 'co';
+import {throttle} from 'lodash';
+
+import React, {Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -7,13 +10,20 @@ import {
   TextInput,
   View
 } from 'react-native';
-import * as Api from './src/google-books-api.js';
-import {observer} from 'mobx-react/native';
+
 import {observable, action} from 'mobx';
+import {observer} from 'mobx-react/native';
+import * as Api from './src/google-books-api.js';
 
 class Store {
    @observable query =  '';
+   @observable suggestions = [];
+
    @action search = () => Api.search(this.query);
+   @action complition = throttle(() => {
+      Api.complition(this.query)
+         .then(suggestions => this.suggestions = suggestions);
+   }, 500)
 }
 
 const store = new Store();
@@ -24,8 +34,11 @@ export default class library extends Component {
     return (
       <View style={styles.container}>
         <TextInput style={styles.query}
-          onChangeText={query => store.query = query}
-          value={store.query}
+          onChangeText={query => {
+             store.query = query; 
+             store.complition();
+           }}
+           value={store.query}
         />
         <Button
            style={styles.button}

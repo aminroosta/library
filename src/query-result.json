@@ -1,0 +1,751 @@
+[
+   {
+      "kind": "books#volume",
+      "id": "nqTPCgAAQBAJ",
+      "etag": "2o4zIrtAev8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nqTPCgAAQBAJ",
+      "volumeInfo": {
+         "title": "Labor of Love",
+         "subtitle": "The Invention of Dating",
+         "authors": [
+            "Moira Weigel"
+         ],
+         "publisher": "Farrar, Straus and Giroux",
+         "publishedDate": "2016-05-17",
+         "description": "“Does anyone date anymore?” Today, the authorities tell us that courtship is in crisis. But when Moira Weigel dives into the history of sex and romance in modern America, she discovers that authorities have always said this. Ever since young men and women started to go out together, older generations have scolded them: That’s not the way to find true love. The first women who made dates with strangers were often arrested for prostitution; long before “hookup culture,” there were “petting parties”; before parents worried about cell phone apps, they fretted about joyrides and “parking.” Dating is always dying. But this does not mean that love is dead. It simply changes with the economy. Dating is, and always has been, tied to work. Lines like “I’ll pick you up at six” made sense at a time when people had jobs that started and ended at fixed hours. But in an age of contract work and flextime, many of us have become sexual freelancers, more likely to text a partner “u still up?” Weaving together over one hundred years of history with scenes from the contemporary landscape, Labor of Love offers a fresh feminist perspective on how we came to date the ways we do. This isn't a guide to “getting the guy.” There are no ridiculous “rules” to follow. Instead, Weigel helps us understand how looking for love shapes who we are—and hopefully leads us closer to the happy ending that dating promises.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_13",
+               "identifier": "9780374713133"
+            },
+            {
+               "type": "ISBN_10",
+               "identifier": "0374713138"
+            }
+         ],
+         "readingModes": {
+            "text": true,
+            "image": false
+         },
+         "pageCount": 304,
+         "printType": "BOOK",
+         "categories": [
+            "Social Science"
+         ],
+         "averageRating": 4,
+         "ratingsCount": 16,
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": true,
+         "contentVersion": "1.2.1.0.preview.2",
+         "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+         },
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=nqTPCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=nqTPCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=nqTPCgAAQBAJ&printsec=frontcover&dq=love&hl=&cd=1&source=gbs_api",
+         "infoLink": "https://play.google.com/store/books/details?id=nqTPCgAAQBAJ&source=gbs_api",
+         "canonicalVolumeLink": "https://market.android.com/details?id=book-nqTPCgAAQBAJ"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "FOR_SALE",
+         "isEbook": true,
+         "listPrice": {
+            "amount": 65.47,
+            "currencyCode": "MYR"
+         },
+         "retailPrice": {
+            "amount": 44.52,
+            "currencyCode": "MYR"
+         },
+         "buyLink": "https://play.google.com/store/books/details?id=nqTPCgAAQBAJ&rdid=book-nqTPCgAAQBAJ&rdot=1&source=gbs_api",
+         "offers": [
+            {
+               "finskyOfferType": 1,
+               "listPrice": {
+                  "amountInMicros": 65470000,
+                  "currencyCode": "MYR"
+               },
+               "retailPrice": {
+                  "amountInMicros": 44520000,
+                  "currencyCode": "MYR"
+               }
+            }
+         ]
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.my/books/download/Labor_of_Love-sample-epub.acsm?id=nqTPCgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=nqTPCgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "“Does anyone date anymore?” Today, the authorities tell us that courtship is in crisis. But when Moira Weigel dives into the history of sex and romance in modern America, she discovers that authorities have always said this."
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "0eBSYClAlvYC",
+      "etag": "+eIfAC4jQLo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0eBSYClAlvYC",
+      "volumeInfo": {
+         "title": "Love",
+         "authors": [
+            "Rosemary Haughton"
+         ],
+         "publishedDate": "1971",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_10",
+               "identifier": "014021352X"
+            },
+            {
+               "type": "ISBN_13",
+               "identifier": "9780140213522"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": false
+         },
+         "pageCount": 202,
+         "printType": "BOOK",
+         "categories": [
+            "Love"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=0eBSYClAlvYC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=0eBSYClAlvYC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=0eBSYClAlvYC&q=love&dq=love&hl=&cd=2&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=0eBSYClAlvYC&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/Love.html?hl=&id=0eBSYClAlvYC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=0eBSYClAlvYC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "toJL3PdKMP0C",
+      "etag": "ADT0UD+0sJo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/toJL3PdKMP0C",
+      "volumeInfo": {
+         "title": "On Love",
+         "subtitle": "In the Muslim Tradition",
+         "authors": [
+            "Rusmir Mahmutćehajić"
+         ],
+         "publisher": "Fordham Univ Press",
+         "publishedDate": "2007",
+         "description": "This rare and important contribution to the field of Islamic studies, philosophy, and comparative religion achieves a twofold objective. First, it draws from a broad and authoritative well of sources, especially in the domain of Sufism, or Islamic mysticism. The scholarship is impeccable. Second, it is an in-depth meditation on the relationship between love and knowledge, multiplicity and unity, the example of the Prophet Muhammed viewed as Universal Man, spiritual union, heart and intellect, and other related themes--conveyed in fresh, contemporary language.The book is as much a work of Sufism as it is a book about Sufism. Many of these themes have a universal appeal for students of mysticism; consequently, there are distinct resonances with other traditions, especially within certain schools of Christian mysticism dominated by the language of love.In our day, when the divisions between many Muslims and many Christians have broadened into chasms of suspicion and fear, books such as this one are especially important for the help they can offer in bridging these rifts. The capacity of scholars to understand these two religions, which stem from the same Abrahamic source, is of the utmost significance, and the best approach to better understanding may be through the mystical traditions, which tend to reflect more tolerance and to recognize a potential for seeing unity in a multiplicity of perspectives. This work conveys the beauty at the heart of the Islamic tradition in a language devoid of technical terminology.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_13",
+               "identifier": "9780823227518"
+            },
+            {
+               "type": "ISBN_10",
+               "identifier": "0823227510"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": true
+         },
+         "pageCount": 169,
+         "printType": "BOOK",
+         "categories": [
+            "Philosophy"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": true,
+         "contentVersion": "preview-1.0.0",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=toJL3PdKMP0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=toJL3PdKMP0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=toJL3PdKMP0C&printsec=frontcover&dq=love&hl=&cd=3&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=toJL3PdKMP0C&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/On_Love.html?hl=&id=toJL3PdKMP0C"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.my/books/download/On_Love-sample-pdf.acsm?id=toJL3PdKMP0C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=toJL3PdKMP0C&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "This work conveys the beauty at the heart of the Islamic tradition in a language devoid of technical terminology."
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "Qm4G9TD9VGEC",
+      "etag": "W1jVvv5A1zQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Qm4G9TD9VGEC",
+      "volumeInfo": {
+         "title": "Love in Africa",
+         "authors": [
+            "Jennifer Cole",
+            "Lynn M. Thomas"
+         ],
+         "publisher": "University of Chicago Press",
+         "publishedDate": "2009-08-01",
+         "description": "In recent years, scholarly interest in love has flourished. Historians have addressed the rise of romantic love and marriage in Europe and the United States, while anthropologists have explored the ways globalization has reshaped local ideas about those same topics. Yet, love in Africa has been peculiarly ignored, resulting in a serious lack of understanding about this vital element of social life—a glaring omission given the intense focus on sexuality in Africa in the wake of HIV/AIDS. Love in Africa seeks both to understand this failure to consider love and to begin to correct it. In a substantive introduction and eight essays that examine a variety of countries and range in time from the 1930s to the present, the contributors collectively argue for the importance of paying attention to the many different cultural and historical strands that constitute love in Africa. Covering such diverse topics as the reception of Bollywood movies in 1950s Zanzibar, the effects of a Mexican telenovela on young people’s ideas about courtship in Niger, the models of romance promoted by South African and Kenyan magazines, and the complex relationship between love and money in Madagascar and South Africa, Love in Africa is a vivid and compelling look at love’s role in African society.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_13",
+               "identifier": "9780226113555"
+            },
+            {
+               "type": "ISBN_10",
+               "identifier": "0226113558"
+            }
+         ],
+         "readingModes": {
+            "text": true,
+            "image": true
+         },
+         "pageCount": 268,
+         "printType": "BOOK",
+         "categories": [
+            "Social Science"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": true,
+         "contentVersion": "0.0.3.0.preview.3",
+         "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+         },
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Qm4G9TD9VGEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Qm4G9TD9VGEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=Qm4G9TD9VGEC&printsec=frontcover&dq=love&hl=&cd=4&source=gbs_api",
+         "infoLink": "https://play.google.com/store/books/details?id=Qm4G9TD9VGEC&source=gbs_api",
+         "canonicalVolumeLink": "https://market.android.com/details?id=book-Qm4G9TD9VGEC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "FOR_SALE",
+         "isEbook": true,
+         "listPrice": {
+            "amount": 122.42,
+            "currencyCode": "MYR"
+         },
+         "retailPrice": {
+            "amount": 85.69,
+            "currencyCode": "MYR"
+         },
+         "buyLink": "https://play.google.com/store/books/details?id=Qm4G9TD9VGEC&rdid=book-Qm4G9TD9VGEC&rdot=1&source=gbs_api",
+         "offers": [
+            {
+               "finskyOfferType": 1,
+               "listPrice": {
+                  "amountInMicros": 122420000,
+                  "currencyCode": "MYR"
+               },
+               "retailPrice": {
+                  "amountInMicros": 85690000,
+                  "currencyCode": "MYR"
+               }
+            }
+         ]
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.my/books/download/Love_in_Africa-sample-epub.acsm?id=Qm4G9TD9VGEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+         },
+         "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.my/books/download/Love_in_Africa-sample-pdf.acsm?id=Qm4G9TD9VGEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=Qm4G9TD9VGEC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "Yet, love in Africa has been peculiarly ignored, resulting in a serious lack of understanding about this vital element of social life—a glaring omission given the intense focus on sexuality in Africa in the wake of HIV/AIDS."
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "CakXYSH-nlwC",
+      "etag": "6k/Vis6jZHQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/CakXYSH-nlwC",
+      "volumeInfo": {
+         "title": "Teachings on Love",
+         "subtitle": "Easyread Edition",
+         "authors": [
+            "Thich Nhat Hanh"
+         ],
+         "publisher": "ReadHowYouWant.com",
+         "publishedDate": "2008-10-21",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_13",
+               "identifier": "9781427092984"
+            },
+            {
+               "type": "ISBN_10",
+               "identifier": "1427092982"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": true
+         },
+         "pageCount": 204,
+         "printType": "BOOK",
+         "categories": [
+            "Body, Mind & Spirit"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "0.0.1.0.preview.1",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=CakXYSH-nlwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=CakXYSH-nlwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=CakXYSH-nlwC&printsec=frontcover&dq=love&hl=&cd=5&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=CakXYSH-nlwC&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/Teachings_on_Love.html?hl=&id=CakXYSH-nlwC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.my/books/download/Teachings_on_Love-sample-pdf.acsm?id=CakXYSH-nlwC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=CakXYSH-nlwC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "1o-4I7beKcIC",
+      "etag": "6T0jZ1b/0yA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/1o-4I7beKcIC",
+      "volumeInfo": {
+         "title": "Love",
+         "subtitle": "A New Look at an Old Word",
+         "authors": [
+            "Don Baker"
+         ],
+         "publisher": "Harvest House Pub",
+         "publishedDate": "1988",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_10",
+               "identifier": "0890816425"
+            },
+            {
+               "type": "ISBN_13",
+               "identifier": "9780890816424"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": false
+         },
+         "pageCount": 141,
+         "printType": "BOOK",
+         "categories": [
+            "Religion"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=1o-4I7beKcIC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=1o-4I7beKcIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=1o-4I7beKcIC&q=love&dq=love&hl=&cd=6&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=1o-4I7beKcIC&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/Love.html?hl=&id=1o-4I7beKcIC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=1o-4I7beKcIC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "wK01LgEACAAJ",
+      "etag": "KyqCv8NH+GA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/wK01LgEACAAJ",
+      "volumeInfo": {
+         "title": "Book Love",
+         "subtitle": "Developing Depth, Stamina, and Passion in Adolescent Readers",
+         "authors": [
+            "Penny Kittle"
+         ],
+         "publisher": "Heinemann Educational Books",
+         "publishedDate": "2012-10-26",
+         "description": "Presents strategies for getting students to read, and offers advice on building a school culture around a love of reading, helping students deepen their understanding of what they read, and balancing independent reading and text study.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_10",
+               "identifier": "0325042950"
+            },
+            {
+               "type": "ISBN_13",
+               "identifier": "9780325042954"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": false
+         },
+         "pageCount": 174,
+         "printType": "BOOK",
+         "categories": [
+            "Education"
+         ],
+         "averageRating": 4.5,
+         "ratingsCount": 6,
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=wK01LgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=wK01LgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=wK01LgEACAAJ&dq=love&hl=&cd=7&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=wK01LgEACAAJ&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/Book_Love.html?hl=&id=wK01LgEACAAJ"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=wK01LgEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "Presents strategies for getting students to read, and offers advice on building a school culture around a love of reading, helping students deepen their understanding of what they read, and balancing independent reading and text study."
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "DQGNLClDVEUC",
+      "etag": "V6k6zLcvIjU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/DQGNLClDVEUC",
+      "volumeInfo": {
+         "title": "How to Love",
+         "subtitle": "Choosing Well at Every Stage of Life",
+         "authors": [
+            "Gordon Livingston"
+         ],
+         "publisher": "ReadHowYouWant.com",
+         "publishedDate": "2011-04-01",
+         "description": "Large print.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_13",
+               "identifier": "9781459617292"
+            },
+            {
+               "type": "ISBN_10",
+               "identifier": "1459617290"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": true
+         },
+         "pageCount": 228,
+         "printType": "BOOK",
+         "categories": [
+            "Compassion"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=DQGNLClDVEUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=DQGNLClDVEUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=DQGNLClDVEUC&printsec=frontcover&dq=love&hl=&cd=8&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=DQGNLClDVEUC&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/How_to_Love.html?hl=&id=DQGNLClDVEUC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=DQGNLClDVEUC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "Large print."
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "-LBxNzeA2eEC",
+      "etag": "V4UPAXBVSOw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/-LBxNzeA2eEC",
+      "volumeInfo": {
+         "title": "Food and Love",
+         "subtitle": "A Cultural History of East and West",
+         "authors": [
+            "Jack Goody"
+         ],
+         "publisher": "Verso",
+         "publishedDate": "1998",
+         "description": "Describes the evolution of cuisines from both the East and West, their influence on the rest of the world, and taboos associated with certain foods and drinks.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_10",
+               "identifier": "185984829X"
+            },
+            {
+               "type": "ISBN_13",
+               "identifier": "9781859848296"
+            }
+         ],
+         "readingModes": {
+            "text": false,
+            "image": true
+         },
+         "pageCount": 305,
+         "printType": "BOOK",
+         "categories": [
+            "Social Science"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "0.0.1.0.preview.1",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=-LBxNzeA2eEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=-LBxNzeA2eEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=-LBxNzeA2eEC&printsec=frontcover&dq=love&hl=&cd=9&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=-LBxNzeA2eEC&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/Food_and_Love.html?hl=&id=-LBxNzeA2eEC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": false
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=-LBxNzeA2eEC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "Describes the evolution of cuisines from both the East and West, their influence on the rest of the world, and taboos associated with certain foods and drinks."
+      }
+   },
+   {
+      "kind": "books#volume",
+      "id": "DqQc89625ysC",
+      "etag": "IfH9aYrfb/I",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/DqQc89625ysC",
+      "volumeInfo": {
+         "title": "Shakespeare's Comedy of Love",
+         "authors": [
+            "Alexander Leggatt"
+         ],
+         "publisher": "Psychology Press",
+         "publishedDate": "2004-12-23",
+         "description": "First published in 1987. This study removes some of the critical puzzles that Shakespeare's comedies of love have posed in the past. The author shows that what distinguishes the comedies is not their similarity but their variety - the way in which each play is a new combination of essentially similar ingredients, so that, for example, the boy/girl changes in The Merchant of Venice are seen to have a quite different significance from those in As You Like It.",
+         "industryIdentifiers": [
+            {
+               "type": "ISBN_10",
+               "identifier": "0415352681"
+            },
+            {
+               "type": "ISBN_13",
+               "identifier": "9780415352680"
+            }
+         ],
+         "readingModes": {
+            "text": true,
+            "image": true
+         },
+         "pageCount": 272,
+         "printType": "BOOK",
+         "categories": [
+            "Literary Criticism"
+         ],
+         "averageRating": 3,
+         "ratingsCount": 2,
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "0.0.2.0.preview.3",
+         "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=DqQc89625ysC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=DqQc89625ysC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+         },
+         "language": "en",
+         "previewLink": "http://books.google.com.my/books?id=DqQc89625ysC&printsec=frontcover&dq=love&hl=&cd=10&source=gbs_api",
+         "infoLink": "http://books.google.com.my/books?id=DqQc89625ysC&dq=love&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/Shakespeare_s_Comedy_of_Love.html?hl=&id=DqQc89625ysC"
+      },
+      "saleInfo": {
+         "country": "MY",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+      },
+      "accessInfo": {
+         "country": "MY",
+         "viewability": "PARTIAL",
+         "embeddable": true,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.my/books/download/Shakespeare_s_Comedy_of_Love-sample-epub.acsm?id=DqQc89625ysC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+         },
+         "pdf": {
+            "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=DqQc89625ysC&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "SAMPLE",
+         "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+         "textSnippet": "First published in 1987."
+      }
+   }
+]
