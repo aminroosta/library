@@ -27,7 +27,6 @@ export const search = async query => {
    });
    
    const result = await response.json();
-   let items = [];
    const items = result.map(book => {
       const { id, kind, volumeInfo } = book;
       const { title, subtitle, authors,
