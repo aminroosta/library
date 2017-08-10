@@ -14,6 +14,7 @@ import {
 import {observable, action} from 'mobx';
 import {observer} from 'mobx-react/native';
 import * as Api from './src/google-books-api.js';
+import AnimationTest from './src/animation-test.js';
 
 class Store {
    @observable query =  '';
@@ -80,4 +81,5 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('library', () => library);
+// AppRegistry.registerComponent('library', () => library);
+AppRegistry.registerComponent('library', () => AnimationTest);
