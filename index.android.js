@@ -1,4 +1,3 @@
-import co from 'co';
 import {throttle} from 'lodash';
 
 import React, {Component} from 'react';
@@ -11,20 +10,22 @@ import {
   View
 } from 'react-native';
 
-import {observable, action} from 'mobx';
+import {observable, action, runInAction} from 'mobx';
 import {observer} from 'mobx-react/native';
 import * as Api from './src/google-books-api.js';
-import AnimationTest from './src/animation-test.js';
 
 class Store {
    @observable query =  '';
    @observable suggestions = [];
 
-   @action search = () => Api.search(this.query);
-   @action complition = throttle(() => {
-      Api.complition(this.query)
-         .then(suggestions => this.suggestions = suggestions);
-   }, 500)
+   @action search = async () => {
+      const results = await Api.search(this.query);
+      console.warn(results);
+   }
+   @action complition = throttle(async () => {
+      const suggestions = await Api.complition(this.query);
+      runInAction(() => this.suggestions = suggestions);
+   });
 }
 
 const store = new Store();
@@ -50,6 +51,9 @@ export default class library extends Component {
          />
         <Text style={styles.instructions}>
           To get started, enter book title and press Search.
+        </Text>
+        <Text style={styles.instructions}>
+           {JSON.stringify(store.suggestions)}
         </Text>
       </View>
     );
@@ -81,5 +85,4 @@ const styles = StyleSheet.create({
   }
 });
 
-// AppRegistry.registerComponent('library', () => library);
-AppRegistry.registerComponent('library', () => AnimationTest);
+AppRegistry.registerComponent('library', () => library);
