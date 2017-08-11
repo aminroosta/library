@@ -8,10 +8,11 @@ const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/jso
  * @prop {string} id
  * @prop {string} kind
  * @prop {string} title
- * @prop {string} subtitle
+ * @prop {string} [subtitle]
  * @prop {string} authors
  * @prop {string} publisher
  * @prop {string} publishedDate
+ * @prop {string} description
  * @prop {string} [smallThumbnail]
  * @prop {string} [thumbnail]
  */
@@ -29,13 +30,13 @@ export const search = async query => {
    const result = await response.json();
    const items = result.map(book => {
       const { id, kind, volumeInfo } = book;
-      const { title, subtitle, authors,
+      const { title, subtitle, authors, description,
          publisher, publishedDate, imageLinks } = volumeInfo;
       const { smallThumbnail, thumbnail } =  imageLinks;
 
       return {
          id, kind, title, subtitle, authors, publisher,
-         publishedDate, smallThumbnail, thumbnail
+         description, publishedDate, smallThumbnail, thumbnail
       }
    });
    return items;
