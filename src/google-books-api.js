@@ -4,22 +4,8 @@ const AMAZON_COMPLITION_URL = 'https://completion.amazon.com/search/complete?met
 const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/json' };
 
 /**
- * @typedef {Object} book
- * @prop {string} id
- * @prop {string} kind
- * @prop {string} title
- * @prop {string} [subtitle]
- * @prop {string} authors
- * @prop {string} publisher
- * @prop {string} publishedDate
- * @prop {string} description
- * @prop {string} [smallThumbnail]
- * @prop {string} [thumbnail]
- */
-
-/**
  * @param {string} query
- * @returns {PromiseLike<book[]>}
+ * @returns {PromiseLike<Book[]>}
  */
 export const search = async query => {
    const response = await fetch(`${GOOGLE_SEARCH_URL}q=${query}`, {

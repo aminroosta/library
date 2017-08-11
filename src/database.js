@@ -73,7 +73,7 @@ const nearYou = [
    }
 ];
 
-/** @returns {PromiseLike<any>} */
+/** @returns {PromiseLike<undefined>} */
 const nap = (ms) => {
    ms = ms ||  ((Math.random()*2000) | 0);
    return new Promise(resolve => setTimeout(resolve, ms));

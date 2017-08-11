@@ -10,6 +10,7 @@ import {
   View
 } from 'react-native';
 
+import {styled} from './src/utils.js';
 import {observable, action, runInAction} from 'mobx';
 import {observer} from 'mobx-react/native';
 import * as Api from './src/google-books-api.js';
@@ -60,6 +61,14 @@ export default class library extends Component {
     );
   }
 }
+
+/** @type {View} */ 
+const Container = styled(View, {
+   flex: 1,
+   justifyContent: 'center',
+   alignItems: 'center',
+   backgroundColor: '#F5FCFF',
+});
 
 const styles = StyleSheet.create({
   container: {
