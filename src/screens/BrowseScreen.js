@@ -11,7 +11,7 @@ import {
 
 import {observable, action, runInAction} from 'mobx';
 import {observer} from 'mobx-react/native';
-import * as Api from '../google-books-api.js';
+import * as Api from '../api/google-books-api.js';
 
 class Store {
    @observable query =  '';
@@ -30,7 +30,7 @@ class Store {
 const store = new Store();
 
 @observer
-export default class library extends Component {
+export default class BrowseScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
