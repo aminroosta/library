@@ -8,11 +8,19 @@ import {
   View
 } from 'react-native';
 import {navigatorStyle} from '../common/style.js';
+import {inject, observer} from 'mobx-react';
 
 @navigatorStyle
+@inject('amin')
+@observer
 export default class BookDetailsScreen extends Component {
    render()  {
-      return (<View style={styles.container}></View>);
+      const {amin} = this.props;
+      return (
+         <View style={styles.container}>
+            <Text>{amin.name} - {amin.age}</Text>
+         </View>
+      );
    }
 }
 
@@ -20,8 +28,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    // borderWidth: 1,
-    // borderColor: 'blue',
     alignItems: 'center',
     backgroundColor: 'powderblue',
   },
