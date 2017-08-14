@@ -25,4 +25,7 @@ Navigation.startTabBasedApp({
       tabBarSelectedButtonColor: '#da0457', // optional, change the color of the selected tab icon and text (only selected)
       tabBarBackgroundColor: '#ffffff' // optional, change the background color of the tab bar
    },
+   appStyle: {
+      orientation: 'portrait'
+   },
 }); 
