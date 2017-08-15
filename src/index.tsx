@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation';
-import { registerComponents } from './screens/index.js'
-import * as constants from './common/constants.js';
+import { registerComponents } from './screens/index'
+import * as constants from './common/constants';
 
 registerComponents();
 

@@ -1,6 +1,5 @@
 import { types } from 'mobx-state-tree';
 
-/** @typedef Book */
 const Book = types.model(
    'Book', {
       id: types.string,

@@ -11,7 +11,7 @@ import {
 
 import {observable, action, runInAction} from 'mobx';
 import {observer} from 'mobx-react/native';
-import * as Api from '../api/google-books-api.js';
+import * as Api from '../api/google-books-api';
 
 class Store {
    @observable query =  '';

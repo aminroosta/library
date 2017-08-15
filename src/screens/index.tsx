@@ -1,9 +1,9 @@
 import { Navigation } from 'react-native-navigation';
-import BrowseScreen from './BrowseScreen.js';
-import DetailsScreen from './DetailsScreen.js';
-import Provider from '../common/mobx-provider.js';
-import * as constants from '../common/constants.js';
-import {someBook} from '../models/models.js';
+import BrowseScreen from './BrowseScreen';
+import DetailsScreen from './DetailsScreen';
+import Provider from '../common/mobx-provider';
+import * as constants from '../common/constants';
+import {someBook} from '../models/models';
 
 const Stores = {
    details:  someBook,

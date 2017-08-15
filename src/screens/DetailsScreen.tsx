@@ -7,10 +7,10 @@ import {
   TextInput,
   View
 } from 'react-native';
-import {navigatorStyle} from '../common/style.js';
+import {navigatorStyle} from '../common/style';
 import {inject, observer} from 'mobx-react';
 
-@navigatorStyle
+@navigatorStyle({})
 @inject('details')
 @observer
 export default class BookDetailsScreen extends Component {
@@ -18,7 +18,7 @@ export default class BookDetailsScreen extends Component {
       const details = this.props.details;
       return (
          <View style={styles.container}>
-            <Text>{details.title}!</Text>
+            <Text>{details.title}</Text>
          </View>
       );
    }
