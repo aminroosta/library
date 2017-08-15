@@ -3,8 +3,10 @@ import BrowseScreen from './BrowseScreen.js';
 import DetailsScreen from './DetailsScreen.js';
 import Provider from '../common/mobx-provider.js';
 import * as constants from '../common/constants.js';
+import {someBook} from '../models/models.js';
 
 const Stores = {
+   details:  someBook,
    amin: {
       name: 'amin',
       age: 27

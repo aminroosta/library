@@ -1,5 +1,5 @@
 
-interface Book {
+interface _Book {
    id: string;
    kind: string;
    title: string;

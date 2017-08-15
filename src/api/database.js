@@ -1,5 +1,4 @@
-
-const latest = [
+export  const latest = [
    {
       "id": "pw90DQAAQBAJ",
       "kind": "books#volume",
@@ -35,7 +34,7 @@ const latest = [
    }
 ]
 
-const nearYou = [
+export const nearYou = [
    {
       "id": "60olDwAAQBAJ",
       "kind": "books#volume",
@@ -71,17 +70,4 @@ const nearYou = [
       "smallThumbnail": "http://books.google.com/books/content?id=Y9NJRiR2kTwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "thumbnail": "http://books.google.com/books/content?id=Y9NJRiR2kTwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
    }
-];
-
-/** @returns {PromiseLike<undefined>} */
-const nap = (ms) => {
-   ms = ms ||  ((Math.random()*2000) | 0);
-   return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-export default {
-   all: async () => {
-      await nap();
-      return [...latest, ...nearYou];
-   }
-};
+]; 

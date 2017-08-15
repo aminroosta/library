@@ -11,14 +11,14 @@ import {navigatorStyle} from '../common/style.js';
 import {inject, observer} from 'mobx-react';
 
 @navigatorStyle
-@inject('amin')
+@inject('details')
 @observer
 export default class BookDetailsScreen extends Component {
    render()  {
-      const {amin} = this.props;
+      const details = this.props.details;
       return (
          <View style={styles.container}>
-            <Text>{amin.name} - {amin.age}</Text>
+            <Text>{details.title}!</Text>
          </View>
       );
    }
