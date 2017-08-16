@@ -42,14 +42,13 @@ export default class BrowseScreen extends Component {
            value={store.query}
         />
         <Button
-           style={styles.button}
            onPress={store.search}
-           color={styles.button.color}
+           color={(styles.button as any).color}
            title="Search"
            accessibilityLabel="Search"
          />
         <Text style={styles.instructions}>
-          To get started, enter book title and press Search
+          To get started, enter book title and press Search!
         </Text>
         <Text style={styles.instructions}>
            {JSON.stringify(store.suggestions)}

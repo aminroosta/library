@@ -1,5 +1,7 @@
 import { types } from 'mobx-state-tree';
 
+
+
 const Book = types.model(
    'Book', {
       id: types.string,
@@ -15,7 +17,5 @@ const Book = types.model(
    }, {
    }
 );
-
-
 
 export default Book;

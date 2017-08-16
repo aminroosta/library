@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Book from '../models/Book'
 import {
   AppRegistry,
   StyleSheet,
@@ -13,7 +14,7 @@ import {inject, observer} from 'mobx-react';
 @navigatorStyle({})
 @inject('details')
 @observer
-export default class BookDetailsScreen extends Component {
+export default class BookDetailsScreen extends Component<{details: typeof Book.Type}> {
    render()  {
       const details = this.props.details;
       return (
