@@ -16,3 +16,17 @@ export const navigatorStyle = function(arg1) {
       target.navigatorStyle = Object.assign(style, defaultNavigatorStyle);
    };
 }
+export const triangle = ({width, height}) =>  ({
+   width: 0,
+   height: 0,
+   backgroundColor: 'transparent',
+   borderStyle: 'solid',
+   borderTopWidth: 0,
+   borderRightWidth: width,
+   borderBottomWidth: height,
+   borderLeftWidth: 0,
+   borderTopColor: 'transparent',
+   borderRightColor: 'transparent',
+   borderBottomColor: 'powderblue',
+   borderLeftColor: 'transparent',
+})

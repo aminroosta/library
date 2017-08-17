@@ -1,3 +1,4 @@
+import {BookType} from '../models/Book';
 const GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?orderBy=relevance&projection=lite&';
 const AMAZON_COMPLITION_URL = 'https://completion.amazon.com/search/complete?method=completion&mkt=1&search-alias=stripbooks&';
 
@@ -10,7 +11,7 @@ export const search = async query => {
    });
    
    const result = await response.json();
-   const items : Book[] = result.map(book => {
+   const items : BookType[] = result.map(book => {
       const { id, kind, volumeInfo } = book;
       const { title, subtitle, authors, description,
          publisher, publishedDate, imageLinks } = volumeInfo;
@@ -34,15 +35,3 @@ export const complition = async (query) => {
    return result[1] as string[];
 };
 
-export interface Book {
-   id: string;
-   kind: string;
-   title: string;
-   subtitle?: string;
-   authors: string[]
-   publisher: string,
-   publishedDate: string,
-   description: string,
-   smallThumbnail?: string
-   thumbnail?: string
-}

@@ -19,3 +19,4 @@ const Book = types.model(
 );
 
 export default Book;
+export type BookType = typeof Book.Type;

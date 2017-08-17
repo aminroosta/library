@@ -7,14 +7,6 @@ import {someBook} from '../models/models';
 
 const Stores = {
    details:  someBook,
-   amin: {
-      name: 'amin',
-      age: 27
-   },
-   reza: {
-      name: 'reza',
-      age: 26
-   }
 }
 
 export const registerComponents = () => {
