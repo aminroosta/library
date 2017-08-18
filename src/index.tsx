@@ -1,6 +1,7 @@
 import { Navigation } from 'react-native-navigation';
 import { registerComponents } from './screens/index'
 import * as constants from './common/constants';
+import {colors} from './common/style';
 
 registerComponents();
 
@@ -20,9 +21,9 @@ Navigation.startTabBasedApp({
 		},
 	],
    tabsStyle: {
-      tabBarButtonColor: '#d8d8d8',
-      tabBarSelectedButtonColor: '#da0457',
-      tabBarBackgroundColor: '#ffffff'
+      tabBarButtonColor: colors.unselected,
+      tabBarSelectedButtonColor: colors.selected,
+      tabBarBackgroundColor: colors.background
    },
    appStyle: {
       orientation: 'portrait'

@@ -10,19 +10,22 @@ import {
   Image,
   Dimensions
 } from 'react-native';
-import {navigatorStyle} from '../common/style';
+import {defaultNavigatorStyle} from '../common/style';
 import {inject, observer} from 'mobx-react';
+import {colors} from '../common/style';
 import DetailsHeader from '../components/DetailsHeader';
 
-@navigatorStyle({})
 @inject('details')
 @observer
 export default class BookDetailsScreen extends Component<{details: BookType}> {
+   static navigatorStyle =  defaultNavigatorStyle;
    render()  {
       const details = this.props.details;
       return (
          <View style={styles.container}>
-            <DetailsHeader uri={details.thumbnail} />
+            <DetailsHeader
+              style={styles.header}
+              uri={details.thumbnail} />
             <Image style={styles.thumbnail} source={{uri: details.smallThumbnail }}/>
          </View>
       );
@@ -34,13 +37,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: 'powderblue',
+    backgroundColor: colors.unselected,
+  },
+  header: {
+    height: '44%',
   },
   thumbnail: {
-     height: 200,
-     aspectRatio: 0.7,
-     resizeMode: 'stretch',
-     top: -160,
-     left: -100
+    height: 200,
+    aspectRatio: 0.7,
+    resizeMode: 'stretch',
+    top: -160,
+    left: -100
   }
 });

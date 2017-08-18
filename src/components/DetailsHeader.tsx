@@ -7,39 +7,43 @@ import {
   Image,
   Dimensions
 } from 'react-native';
-import {triangle} from '../common/style';
+import {colors} from '../common/style';
 
-const HeaderBackground = ({uri, style = null}) => (
+const HeaderBackground = ({uri, style = {}}) => (
    <View
       style={[styles.container, style]}>
-
       <Image
          source={{uri: uri, cache: 'force-cache'}}
          style={styles.background}
          blurRadius={2} />
-      <View style={[styles.triangleShape, styles.triangle]} />
+      <View style={styles.rectangle} />
    </View>
 );
 
 const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
-const CONTAINER_HEIGHT = HEIGHT/3.0;
 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
     overflow: 'hidden',
-    height: CONTAINER_HEIGHT
+    minHeight: HEIGHT*0.33,
   },
   background: {
-     width: `100%`,
-     position: 'absolute',
-     aspectRatio: 1,
-     resizeMode: 'cover'
+    position: 'absolute',
+    width: `100%`,
+    aspectRatio: 1,
+    resizeMode: 'cover',
   },
-  triangleShape: triangle({width: WIDTH, height: CONTAINER_HEIGHT/3.0}),
-  triangle: {
-     position: 'absolute',
-     bottom: -1
+  rectangle: {
+    position: 'absolute',
+    bottom: '-21%',
+    width: '120%',
+    height: '55%',
+    backgroundColor: colors.background,
+    transform: [
+      { rotate: '11deg' },
+      { translateX: WIDTH*-0.1 }
+    ]
   }
 });
 

@@ -11,6 +11,7 @@ import {
 
 import {observable, action, runInAction} from 'mobx';
 import {observer} from 'mobx-react/native';
+import {defaultNavigatorStyle} from '../common/style';
 import * as Api from '../api/google-books-api';
 
 class Store {
@@ -31,6 +32,7 @@ const store = new Store();
 
 @observer
 export default class BrowseScreen extends Component {
+   static navigatorStyle = defaultNavigatorStyle;
   render() {
     return (
       <View style={styles.container}>
