@@ -14,6 +14,9 @@ const Book = types.model(
       description: types.string,
       smallThumbnail: '',
       thumbnail: '',
+      categories: types.array(types.string),
+      isbn10: '',
+      isbn13: '',
    }, {
    }
 );

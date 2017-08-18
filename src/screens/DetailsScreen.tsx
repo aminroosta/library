@@ -13,6 +13,7 @@ import {
 import {defaultNavigatorStyle} from '../common/style';
 import {inject, observer} from 'mobx-react';
 import {colors} from '../common/style';
+import DetailsHeaderBackground from '../components/DetailsHeaderBackground';
 import DetailsHeader from '../components/DetailsHeader';
 
 @inject('details')
@@ -23,10 +24,9 @@ export default class BookDetailsScreen extends Component<{details: BookType}> {
       const details = this.props.details;
       return (
          <View style={styles.container}>
-            <DetailsHeader
-              style={styles.header}
-              uri={details.thumbnail} />
-            <Image style={styles.thumbnail} source={{uri: details.smallThumbnail }}/>
+            <DetailsHeaderBackground style={styles.header} uri={details.thumbnail} >
+                <DetailsHeader />
+            </DetailsHeaderBackground>
          </View>
       );
    }
@@ -42,11 +42,4 @@ const styles = StyleSheet.create({
   header: {
     height: '44%',
   },
-  thumbnail: {
-    height: 200,
-    aspectRatio: 0.7,
-    resizeMode: 'stretch',
-    top: -160,
-    left: -100
-  }
 });

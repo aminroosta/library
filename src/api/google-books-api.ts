@@ -1,8 +1,12 @@
 import {BookType} from '../models/Book';
-const GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?orderBy=relevance&projection=lite&';
+const USER_AGENT = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3188.0 Mobile Safari/537.36';
+const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': USER_AGENT };
+
+const GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?orderBy=relevance&';
 const AMAZON_COMPLITION_URL = 'https://completion.amazon.com/search/complete?method=completion&mkt=1&search-alias=stripbooks&';
 
-const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/json' };
+const GOODREAD = { key: 'cBva9rmCra8a0M4TcfasA', secret: 'WQoON9zrNZqxYznWbY4BhlGX9vEcHPZruys41NyFc' };
+const GOODREAD_INFO_URL = `https://www.goodreads.com/book/isbn?format=xml&key=${GOODREAD.key}&isbn=9781843589501`;
 
 export const search = async query => {
    const response = await fetch(`${GOOGLE_SEARCH_URL}q=${query}`, {
@@ -11,15 +15,28 @@ export const search = async query => {
    });
    
    const result = await response.json();
-   const items : BookType[] = result.map(book => {
+   if(result.error || !result.items) {
+     return [];
+   }
+   const items : BookType[] = result.items.map(book => {
       const { id, kind, volumeInfo } = book;
+
       const { title, subtitle, authors, description,
-         publisher, publishedDate, imageLinks } = volumeInfo;
+         industryIdentifiers, categories, publisher,
+         publishedDate, imageLinks } = volumeInfo;
+
       const { smallThumbnail, thumbnail } =  imageLinks;
+
+      const isbnInx10 = industryIdentifiers.findIndex(ind => ind.type === 'ISBN_10');
+      const isbnInx13 = industryIdentifiers.findIndex(ind => ind.type === 'ISBN_13');
 
       return {
          id, kind, title, subtitle, authors, publisher,
-         description, publishedDate, smallThumbnail, thumbnail
+         description, publishedDate, categories,
+         smallThumbnail: smallThumbnail.replace('http://', 'https://'),
+         thumbnail: thumbnail.replace('http://', 'https://'),
+         isbn10: isbnInx10 !== -1 ? industryIdentifiers[isbnInx10].identifier : '',
+         isbn13: isbnInx13 !== -1 ? industryIdentifiers[isbnInx13].identifier : '',
       }
    });
    return items;

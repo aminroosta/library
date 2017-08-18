@@ -1,50 +1,61 @@
 import React, {Component} from 'react';
+import {BookType} from '../models/Book';
+import {inject, observer} from 'mobx-react';
 import {
   StyleSheet,
   Text,
-  TextInput,
   View,
   Image,
   Dimensions
 } from 'react-native';
 import {colors} from '../common/style';
 
-const HeaderBackground = ({uri, style = {}}) => (
-   <View
-      style={[styles.container, style]}>
-      <Image
-         source={{uri: uri, cache: 'force-cache'}}
-         style={styles.background}
-         blurRadius={2} />
-      <View style={styles.rectangle} />
-   </View>
-);
-
-const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
+@inject('details')
+@observer
+export default class DetailsHeader extends Component<{details?: BookType}> {
+  render() {
+    const {thumbnail, authors, categories, title } = this.props.details;
+    return (
+      <View style={styles.container}>
+        <Image style={styles.thumbnail} source={{uri: thumbnail }}/>
+        <View style={styles.info}>
+          <Text style={styles.title}> {title} </Text>
+          <Text style={styles.subtitle}> {`by ${authors.join(', ')}`} </Text>
+          <Text style={styles.subtitle}> {categories.join(', ')} </Text>
+        </View>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    overflow: 'hidden',
-    minHeight: HEIGHT*0.33,
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    paddingTop: '20%'
   },
-  background: {
-    position: 'absolute',
-    width: `100%`,
-    aspectRatio: 1,
-    resizeMode: 'cover',
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: colors.background
   },
-  rectangle: {
-    position: 'absolute',
-    bottom: '-21%',
-    width: '120%',
-    height: '55%',
-    backgroundColor: colors.background,
-    transform: [
-      { rotate: '11deg' },
-      { translateX: WIDTH*-0.1 }
-    ]
+  subtitle: {
+    fontSize: 14,
+    opacity: 0.7,
+    color: colors.background
+  },
+  info: {
+    flex: 2,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  thumbnail: {
+    flex: 1,
+    marginLeft: 20,
+    height: '60%',
+    aspectRatio: 0.7,
+    resizeMode: 'stretch',
   }
 });
-
-export default HeaderBackground;
