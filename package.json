@@ -12,10 +12,11 @@
 		"@types/react": "^16.0.0",
 		"@types/react-native": "^0.47.0",
 		"cheerio-without-node-native": "^0.20.2",
+		"json-mobx": "^0.7.0",
 		"lodash": "^4.17.4",
 		"mobx": "^3.2.2",
 		"mobx-react": "^4.2.2",
-		"mobx-state-tree": "^0.9.5",
+		"mobx-state-tree": "^0.10.1",
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.47.1",
 		"react-native-navigation": "latest"

@@ -1,4 +1,4 @@
-import {BookType} from '../models/Book';
+import {Book} from '../models/Book';
 import {USER_AGENT} from '../common/constants';
 const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': USER_AGENT };
 
@@ -15,7 +15,7 @@ export const search = async query => {
    if(result.error || !result.items) {
      return [];
    }
-   const items : BookType[] = result.items.map(book => {
+   const items : Book[] = result.items.map(book => {
       const { id, kind, volumeInfo } = book;
 
       const { title, subtitle, authors, description,

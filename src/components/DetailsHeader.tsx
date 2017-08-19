@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BookType} from '../models/Book';
+import {Book} from '../models/Book';
 import {inject, observer} from 'mobx-react';
 import {
   StyleSheet,
@@ -12,14 +12,15 @@ import {colors} from '../common/style';
 
 @inject('details')
 @observer
-export default class DetailsHeader extends Component<{details?: BookType}> {
+export default class DetailsHeader extends Component<{details: Book}> {
   render() {
-    const {thumbnail, authors, categories, title } = this.props.details;
+    const {details} = this.props;
+    const {thumbnail, authors, categories, title, review} = details;
     return (
       <View style={styles.container}>
         <Image style={styles.thumbnail} source={{uri: thumbnail }}/>
         <View style={styles.info}>
-          <Text style={styles.title}> {title} </Text>
+          <Text style={styles.title}> {title} - { review && review.ratingAverage } </Text>
           <Text style={styles.subtitle}> {`by ${authors.join(', ')}`} </Text>
           <Text style={styles.subtitle}> {categories.join(', ')} </Text>
         </View>
