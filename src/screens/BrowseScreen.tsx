@@ -12,7 +12,8 @@ import {
 import {observable, action, runInAction} from 'mobx';
 import {observer} from 'mobx-react/native';
 import {defaultNavigatorStyle} from '../common/style';
-import * as Api from '../api/google-books-api';
+import * as Api from '../api/Google';
+
 
 class Store {
    @observable query =  '';
