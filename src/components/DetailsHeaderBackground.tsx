@@ -37,12 +37,12 @@ const styles = StyleSheet.create({
   },
   rectangle: {
     position: 'absolute',
-    bottom: '-21%',
+    bottom: '-20%',
     width: '120%',
     height: '55%',
     backgroundColor: colors.background,
     transform: [
-      { rotate: '11deg' },
+      { rotate: '10deg' },
       { translateX: WIDTH*-0.1 }
     ]
   }

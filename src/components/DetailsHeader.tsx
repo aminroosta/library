@@ -9,20 +9,23 @@ import {
   Dimensions
 } from 'react-native';
 import {colors} from '../common/style';
+import StarsRating from './StarsRating';
 
 @inject('details')
 @observer
-export default class DetailsHeader extends Component<{details: Book}> {
+export default class DetailsHeader extends Component<{details?: Book}> {
   render() {
     const {details} = this.props;
     const {thumbnail, authors, categories, title, review} = details;
+    let rating = review ? review.ratingAverage : 0;
     return (
       <View style={styles.container}>
         <Image style={styles.thumbnail} source={{uri: thumbnail }}/>
         <View style={styles.info}>
-          <Text style={styles.title}> {title} - { review && review.ratingAverage } </Text>
+          <Text style={styles.title}> {title} </Text>
           <Text style={styles.subtitle}> {`by ${authors.join(', ')}`} </Text>
           <Text style={styles.subtitle}> {categories.join(', ')} </Text>
+          <StarsRating rating={rating} style={styles.starsRating} />
         </View>
       </View>
     );
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    paddingTop: '20%'
+    paddingTop: '17%'
   },
   title: {
     fontSize: 20,
@@ -58,5 +61,8 @@ const styles = StyleSheet.create({
     height: '60%',
     aspectRatio: 0.7,
     resizeMode: 'stretch',
+  },
+  starsRating: {
+    marginTop: 5
   }
 });
