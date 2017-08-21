@@ -1,4 +1,3 @@
-import { types } from 'mobx-state-tree';
 import { Review } from '../models/Review';
 import { Google } from '../api/api';
 import { json } from 'json-mobx';
@@ -19,7 +18,7 @@ export class Book {
   @json @observable isbn10 = '';
   @json @observable isbn13 = '';
 
-  @observable private _review : typeof Review.Type = null;
+  @observable private _review : Review = null;
 
   @computed get review() {
     const title = this.title;
