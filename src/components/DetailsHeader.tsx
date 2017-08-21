@@ -8,7 +8,7 @@ import {
   Image,
   Dimensions
 } from 'react-native';
-import {colors} from '../common/style';
+import {colors, fontFamily} from '../common/style';
 import StarsRating from './StarsRating';
 
 @inject('details')
@@ -22,7 +22,7 @@ export default class DetailsHeader extends Component<{details?: Book}> {
       <View style={styles.container}>
         <Image style={styles.thumbnail} source={{uri: thumbnail }}/>
         <View style={styles.info}>
-          <Text style={styles.title}> {title} </Text>
+          <Text style={styles.title}> {title}-{rating} </Text>
           <Text style={styles.subtitle}> {`by ${authors.join(', ')}`} </Text>
           <Text style={styles.subtitle}> {categories.join(', ')} </Text>
           <StarsRating rating={rating} style={styles.starsRating} />
@@ -38,16 +38,18 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    paddingTop: '17%'
+    paddingTop: '15%'
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    fontFamily:  fontFamily,
     color: colors.background
   },
   subtitle: {
     fontSize: 14,
     opacity: 0.7,
+    fontFamily:  fontFamily,
     color: colors.background
   },
   info: {

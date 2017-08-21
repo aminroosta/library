@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 export const colors = {
   background: '#FFFFFF',
   selected: '#DA0457',
@@ -12,3 +14,5 @@ export const defaultNavigatorStyle = {
   navBarTextColor: colors.background,
   navBarButtonColor: colors.background,
 };
+
+export const fontFamily = Platform.OS === 'ios' ? 'System' : 'Roboto';

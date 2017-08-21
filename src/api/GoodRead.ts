@@ -3,6 +3,7 @@ import cheerio from 'cheerio-without-node-native';
 import {USER_AGENT} from '../common/constants';
 
 const GOODREAD_REVIEWS_URL = `https://www.goodreads.com/book/title`;
+const GOODREAD_SWITCH_MOBILE_URL = `https://www.goodreads.com/toggle_mobile?switch_to=mobile`;
 
 const cached = (url: string) => {
   let promise = null;
@@ -20,10 +21,11 @@ const cached = (url: string) => {
   };
   return sendRequest;
 };
-const switchToMobile = cached(`https://www.goodreads.com/toggle_mobile?switch_to=mobile`);
+let switchToMobile = cached(GOODREAD_SWITCH_MOBILE_URL);
 
 export const review = async (title: string) => {
    await switchToMobile();
+   // await fetch(GOODREAD_SWITCH_MOBILE_URL, { method: 'GET' });
    const response = await fetch(`${GOODREAD_REVIEWS_URL}?title=${title}`, {
       method: 'GET',
       headers: { 'User-Agent': USER_AGENT }, 
@@ -60,4 +62,4 @@ const parseGoodread = html => {
     reviews: reviews as any,
   };
   return result;
-};
+}; 

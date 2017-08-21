@@ -20,7 +20,7 @@ const Star = ({rating, inx, size, style} : {rating: number, inx: number, size: n
   return (
     <View style={style}>
       <Image source={starIcon} style={[emptyIcon]} />
-      <View style={{ width: width, height: size, overflow: 'hidden', position: 'absolute'}}>
+      <View style={{ width: width, height: size, borderWidth: 0, overflow: 'hidden', position: 'absolute'}}>
         <Image source={starIcon} style={[fullIcon]} />
       </View>
     </View>

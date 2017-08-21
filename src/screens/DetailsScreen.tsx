@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
   },
   header: {
     height: '44%',
+    borderWidth: 0,
   },
 });
