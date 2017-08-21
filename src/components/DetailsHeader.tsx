@@ -22,7 +22,7 @@ export default class DetailsHeader extends Component<{details?: Book}> {
       <View style={styles.container}>
         <Image style={styles.thumbnail} source={{uri: thumbnail }}/>
         <View style={styles.info}>
-          <Text style={styles.title}> {title}-{rating} </Text>
+          <Text style={styles.title}> {title} </Text>
           <Text style={styles.subtitle}> {`by ${authors.join(', ')}`} </Text>
           <Text style={styles.subtitle}> {categories.join(', ')} </Text>
           <StarsRating rating={rating} style={styles.starsRating} />
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    paddingTop: '15%'
+    paddingTop: '10%'
   },
   title: {
     fontSize: 20,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    opacity: 0.7,
+    opacity: 0.8,
     fontFamily:  fontFamily,
     color: colors.background
   },
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   thumbnail: {
     flex: 1,
-    marginLeft: 20,
+    marginLeft: 15,
     height: '60%',
     aspectRatio: 0.7,
     resizeMode: 'stretch',

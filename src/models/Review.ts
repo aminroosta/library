@@ -24,7 +24,8 @@ export class Review {
   public static async getByTitle(title: string) {
     const key = `@Review/${title}`;
     const review = new Review();
-    const cache = await AsyncStorage.getItem(key);
+    let cache = await AsyncStorage.getItem(key);
+    cache = null;
     if(cache !== null) {
       const data = JSON.parse(cache);
       json.load(review, data);

@@ -15,7 +15,7 @@ const HeaderBackground = ({uri, children, style = {}}) => (
       <Image
          source={{uri: uri, cache: 'force-cache'}}
          style={styles.background}
-         blurRadius={2} />
+         blurRadius={3} />
       <View style={styles.rectangle} />
       { children }
    </View>
@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
     width: '100%',
     overflow: 'hidden',
     minHeight: HEIGHT*0.33,
+    top: -20,
+    marginBottom: -20,
   },
   background: {
     position: 'absolute',

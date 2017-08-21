@@ -20,6 +20,9 @@ Navigation.startTabBasedApp({
 			title: 'Browse Screen'
 		},
 	],
+   navigatorStyle: {
+     navBarHidden: true,
+   },
    tabsStyle: {
       tabBarButtonColor: colors.unselected,
       tabBarSelectedButtonColor: colors.selected,
