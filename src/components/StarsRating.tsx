@@ -1,53 +1,64 @@
 import React, {Component} from 'react';
-import {inject, observer} from 'mobx-react';
-import {
-  StyleSheet,
-  View,
-  Image,
-} from 'react-native';
 import {colors} from '../common/style';
+import styled from 'styled-components/native';
 const starIcon = require('../../img/star.png');
 
-const Star = ({rating, inx, size, style} : {rating: number, inx: number, size: number, style?: object}) => {
-  const emptyIcon = {width: size, height: size, tintColor: colors.background};
-  const fullIcon = {width: size, height: size, tintColor: colors.button};
+const createStar =
+  ({Wrapper, Star, OverlayWrapper}) =>
+  ({rating, inx} : {rating: number, inx: number}) => (
 
-  if(rating >= inx) { return (<Image source={starIcon} style={[ style, fullIcon ]} />); }
-  if(rating <= inx-1) { return (<Image source={starIcon} style={[ style, emptyIcon ]} />); }
+    <Wrapper>
+      { rating >= inx ? <Star full /> : <Star /> }
+      { rating > inx -1 && rating < inx  &&
+        <OverlayWrapper rate={rating+1 -inx}>
+          <Star full />
+        </OverlayWrapper>  
+      }
+    </Wrapper>
+);
 
-  const width = ((rating + 1 - inx) * size) | 0;
-
-  return (
-    <View style={style}>
-      <Image source={starIcon} style={[emptyIcon]} />
-      <View style={{ width: width, height: size, borderWidth: 0, overflow: 'hidden', position: 'absolute'}}>
-        <Image source={starIcon} style={[fullIcon]} />
-      </View>
-    </View>
- );
-};
-
-const StarsRating = ({rating, style} : {rating: number, style?: object}) => {
-  return (
-    <View style={[style, styles.container]}>
-      <Star rating={rating} inx={1} size={20} style={styles.icon} />
-      <Star rating={rating} inx={2} size={20} style={styles.icon} />
-      <Star rating={rating} inx={3} size={20} style={styles.icon} />
-      <Star rating={rating} inx={4} size={20} style={styles.icon} />
-      <Star rating={rating} inx={5} size={20} style={styles.icon} />
-    </View>
-  )
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    backgroundColor: 'transparent',
-    alignItems: 'flex-start',
-  },
-  icon: {
-    marginLeft: 2,
-  }
+const Star = createStar({
+  Wrapper: styled.View
+  `
+    margin-left: 2px;
+  `,
+  Star: styled.Image.attrs({ source: starIcon })
+  `
+    width: 20px;
+    height: 20px;
+    tint-color: ${(p:any) => p.full ? colors.button : colors.background};
+  `,
+  OverlayWrapper: styled.View
+  `
+    border-width: 0;
+    overflow: hidden;
+    position: absolute;
+    height: 20px;
+    width: ${(p:any) => `${p.rate*20 | 0}px`};
+  `
 });
 
-export default StarsRating;
+const createSartsRating =
+  ({Wrapper, Star}) => 
+  ({rating, style} : {rating: number, style: object}) => (
+
+    <Wrapper style={style}>
+      <Star rating={rating} inx={1} />
+      <Star rating={rating} inx={2} />
+      <Star rating={rating} inx={3} />
+      <Star rating={rating} inx={4} />
+      <Star rating={rating} inx={5} />
+    </Wrapper>
+);
+
+const SartsRating = createSartsRating({
+  Wrapper: styled.View
+  `
+    flex-direction: row;
+    background-color: transparent;
+    align-items: flex-start;
+  `,
+  Star: Star
+});
+
+export default SartsRating;

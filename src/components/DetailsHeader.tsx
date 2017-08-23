@@ -1,70 +1,69 @@
 import React, {Component} from 'react';
+import styled from 'styled-components/native';
 import {Book} from '../models/Book';
-import {inject, observer} from 'mobx-react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Dimensions
-} from 'react-native';
+import {observer} from 'mobx-react';
 import {colors, fontFamily} from '../common/style';
 import StarsRating from './StarsRating';
 
-@inject('details')
-@observer
-export default class DetailsHeader extends Component<{details?: Book}> {
-  render() {
-    const {details} = this.props;
-    const {thumbnail, authors, categories, title, review} = details;
-    let rating = review ? review.ratingAverage : 0;
-    return (
-      <View style={styles.container}>
-        <Image style={styles.thumbnail} source={{uri: thumbnail }}/>
-        <View style={styles.info}>
-          <Text style={styles.title}> {title} </Text>
-          <Text style={styles.subtitle}> {`by ${authors.join(', ')}`} </Text>
-          <Text style={styles.subtitle}> {categories.join(', ')} </Text>
-          <StarsRating rating={rating} style={styles.starsRating} />
-        </View>
-      </View>
-    );
-  }
+const createDetailsHeader = 
+  ({Wrapper, ThumbnailImage, InfoWrapper, Title, Subtitle, StarsRating}) => 
+  ({ details, style }: {details: Book, style?: object}) => {
+
+   const  { thumbnail, authors, categories, title, review } = details;
+   return (
+     <Wrapper style={style}>
+      <ThumbnailImage source={{uri: thumbnail}} />
+      <InfoWrapper>
+        <Title> {title} </Title>
+        <Subtitle> {`by ${authors.join(', ')}`} </Subtitle>
+        <Subtitle> {categories.join(', ')} </Subtitle>
+        <StarsRating rating={review ? review.ratingAverage : 0} />
+      </InfoWrapper>
+     </Wrapper>
+  );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'transparent',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    paddingTop: '10%'
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    fontFamily:  fontFamily,
-    color: colors.background
-  },
-  subtitle: {
-    fontSize: 14,
-    opacity: 0.8,
-    fontFamily:  fontFamily,
-    color: colors.background
-  },
-  info: {
-    flex: 2,
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-  },
-  thumbnail: {
-    flex: 1,
-    marginLeft: 15,
-    height: '60%',
-    aspectRatio: 0.7,
-    resizeMode: 'stretch',
-  },
-  starsRating: {
-    marginTop: 5
-  }
+const DetailsHeader = createDetailsHeader({
+  Wrapper: styled.View
+  `
+    flex: 1;
+    background-color: transparent;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 10%;
+  `,
+  ThumbnailImage: styled.Image
+  `
+    flex: 1;
+    margin-left: 15px;
+    height: 60%;
+    aspect-ratio: 0.7;
+    resize-mode: stretch;
+  `,
+  InfoWrapper: styled.View
+  `
+    flex: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+  `,
+  Title:  styled.Text
+  `
+    font-size: 20px;
+    font-weight: bold;
+    font-family:  ${fontFamily};
+    color: ${colors.background};
+  `,
+  Subtitle: styled.Text
+  `
+    font-size: 14px;
+    opacity: 0.8;
+    font-family:  ${fontFamily};
+    color: ${colors.background};
+  `,
+  StarsRating: styled(StarsRating)
+  `
+    margin-top: 5;
+  `
 });
+
+export default observer(DetailsHeader);

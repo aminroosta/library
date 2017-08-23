@@ -19,7 +19,8 @@
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.47.1",
 		"react-native-htmlview": "^0.12.0",
-		"react-native-navigation": "latest"
+		"react-native-navigation": "latest",
+		"styled-components": "^2.1.2"
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",

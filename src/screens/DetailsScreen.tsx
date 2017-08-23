@@ -30,7 +30,7 @@ export default class BookDetailsScreen extends Component<{details: Book}> {
       return (
          <ScrollView style={styles.container}>
             <DetailsHeaderBackground style={styles.header} uri={details.thumbnail} >
-                <DetailsHeader />
+                <DetailsHeader details={details} />
             </DetailsHeaderBackground>
             <Text style={{
               fontSize: 16, fontWeight: 'bold', backgroundColor: colors.background,
