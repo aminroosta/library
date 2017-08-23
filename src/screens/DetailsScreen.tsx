@@ -15,9 +15,9 @@ import {defaultNavigatorStyle} from '../common/style';
 import { observable } from 'mobx';
 import {inject, observer} from 'mobx-react';
 import {colors} from '../common/style';
-import HTMLView from 'react-native-htmlview';
 import DetailsHeaderBackground from '../components/DetailsHeaderBackground';
 import DetailsHeader from '../components/DetailsHeader';
+import HTMLView from '../components/HtmlView';
 
 @inject('details')
 @observer
@@ -36,13 +36,7 @@ export default class BookDetailsScreen extends Component<{details: Book}> {
               fontSize: 16, fontWeight: 'bold', backgroundColor: colors.background,
               paddingLeft: 15, paddingBottom: 8,
             }}>Synopsis</Text>
-            <HTMLView
-                value={description}
-                style={{
-                  backgroundColor: colors.background,
-                  paddingHorizontal: 15
-                }}
-                addLineBreaks={false} />
+            <HTMLView value={description} />
          </ScrollView>
       );
    }
