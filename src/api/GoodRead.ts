@@ -1,6 +1,7 @@
 import {Review, ReviewItem} from '../models/Review';
 import cheerio from 'cheerio-without-node-native';
 import {USER_AGENT} from '../common/constants';
+import {memoize} from '../common/utils';
 
 const GOODREAD_REVIEWS_URL = `https://www.goodreads.com/book/title`;
 const GOODREAD_SWITCH_MOBILE_URL = `https://www.goodreads.com/toggle_mobile?switch_to=mobile`;
@@ -21,11 +22,10 @@ const cached = (url: string) => {
   };
   return sendRequest;
 };
-let switchToMobile = cached(GOODREAD_SWITCH_MOBILE_URL);
+let switchToMobile = memoize((url: string) => fetch(url, {method : 'GET'}));
 
-export const review = async (title: string) => {
-   await switchToMobile();
-   // await fetch(GOODREAD_SWITCH_MOBILE_URL, { method: 'GET' });
+export const review = memoize(async (title: string) => {
+   await switchToMobile(GOODREAD_REVIEWS_URL);
    const response = await fetch(`${GOODREAD_REVIEWS_URL}?title=${title}`, {
       method: 'GET',
       headers: { 'User-Agent': USER_AGENT }, 
@@ -35,7 +35,7 @@ export const review = async (title: string) => {
    const result = parseGoodread(html);
 
    return result;
-};
+});
 
 const parseGoodread = html => {
   const $ : CheerioStatic = cheerio.load(html);

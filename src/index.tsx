@@ -1,5 +1,5 @@
 import { Navigation } from 'react-native-navigation';
-import { registerComponents } from './screens/index'
+import { registerComponents } from './screens/screens'
 import * as constants from './common/constants';
 import {colors} from './common/style';
 

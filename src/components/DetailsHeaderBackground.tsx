@@ -24,7 +24,7 @@ const DetailsHeaderBackground = createDetailsHeaderBackground({
     top: -20px;
     margin-bottom: -20px;
   `,
-  BackgroundImage: styled.Image.attrs({blurRadius: 3})
+  BackgroundImage: styled.Image.attrs({blurRadius: 1})
   `
     position: absolute;
     width: 100%;
