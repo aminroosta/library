@@ -1,29 +1,36 @@
 import React, {Component} from 'react';
 import styled from 'styled-components/native';
 import {Book} from '../models/Book';
-import {observer} from 'mobx-react';
+import {observer, inject} from 'mobx-react';
 import {colors, fontFamily} from '../common/style';
 import StarsRating from './StarsRating';
+import DetailsHeaderBackground from './DetailsHeaderBackground';
 
 const createDetailsHeader = 
-  ({Wrapper, ThumbnailImage, InfoWrapper, Title, Subtitle, StarsRating}) => 
-  ({ details, style }: {details: Book, style?: object}) => {
+  ({Background, Wrapper, ThumbnailImage, InfoWrapper, Title, Subtitle, StarsRating}) => 
+  ({ details, style }: {details?: Book, style?: object}) => {
 
    const  { thumbnail, authors, categories, title, review } = details;
    return (
-     <Wrapper style={style}>
-      <ThumbnailImage source={{uri: thumbnail}} />
-      <InfoWrapper>
-        <Title> {title} </Title>
-        <Subtitle> {`by ${authors.join(', ')}`} </Subtitle>
-        <Subtitle> {categories.join(', ')} </Subtitle>
-        <StarsRating rating={review ? review.ratingAverage : 0} />
-      </InfoWrapper>
-     </Wrapper>
+     <Background uri={thumbnail} style={style}>
+       <Wrapper>
+        <ThumbnailImage source={{uri: thumbnail}} />
+        <InfoWrapper>
+          <Title> {title} </Title>
+          <Subtitle> {`by ${authors.join(', ')}`} </Subtitle>
+          <Subtitle> {categories.join(', ')} </Subtitle>
+          <StarsRating rating={review ? review.ratingAverage : 0} />
+        </InfoWrapper>
+       </Wrapper>
+     </Background>
   );
 }
 
 const DetailsHeader = createDetailsHeader({
+  Background: styled(DetailsHeaderBackground)
+  `
+    border-width: 0;
+  `,
   Wrapper: styled.View
   `
     flex: 1;
@@ -66,4 +73,4 @@ const DetailsHeader = createDetailsHeader({
   `
 });
 
-export default observer(DetailsHeader);
+export default inject('details')(observer(DetailsHeader));

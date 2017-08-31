@@ -9,6 +9,7 @@ export const colors = {
 
 export const defaultNavigatorStyle = {
   navBarHidden: true,
+  navBarHeight: 50,
   drawUnderNavBar: true,
   navBarTransparent: true,
   navBarTranslucent: true,

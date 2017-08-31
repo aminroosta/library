@@ -58,7 +58,6 @@ const HTMLView = createHTMLView({
   Wrapper: styled.View
   `
     background-color: ${colors.background};
-    padding: 0 15px;
   `
 });
 
