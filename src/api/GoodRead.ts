@@ -6,22 +6,6 @@ import {memoize} from '../common/utils';
 const GOODREAD_REVIEWS_URL = `https://www.goodreads.com/book/title`;
 const GOODREAD_SWITCH_MOBILE_URL = `https://www.goodreads.com/toggle_mobile?switch_to=mobile`;
 
-const cached = (url: string) => {
-  let promise = null;
-  const sendRequest = () => {
-    if(promise) {
-      return promise;
-    }
-    promise = fetch(url, { method: 'GET' })
-      .catch((up) => {
-        promise = null;
-        throw up;
-      });
-
-    return promise;
-  };
-  return sendRequest;
-};
 let switchToMobile = memoize((url: string) => fetch(url, {method : 'GET'}));
 
 export const review = memoize(async (title: string) => {

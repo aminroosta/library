@@ -25,7 +25,6 @@ export class Review {
     const key = `@Review/${title}`;
     const review = new Review();
     let cache = await AsyncStorage.getItem(key);
-    cache = null;
     if(cache !== null) {
       const data = JSON.parse(cache);
       json.load(review, data);
@@ -33,7 +32,7 @@ export class Review {
     }
     // Query the site if not cached yet.
     const data = await GoodRead.review(title);
-    await AsyncStorage.setItem(key, JSON.stringify(review));
+    await AsyncStorage.setItem(key, JSON.stringify(data));
     json.load(review, data);
     return review;
   }

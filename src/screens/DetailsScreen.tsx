@@ -1,16 +1,6 @@
 import React, {Component} from 'react';
 import {Book} from '../models/Book'
-import {Review} from '../models/Review';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  TextInput,
-  ScrollView,
-  Animated,
-  Image,
-  Dimensions
-} from 'react-native';
+import {Dimensions} from 'react-native';
 import {inject, observer} from 'mobx-react';
 import {colors, defaultNavigatorStyle} from '../common/style';
 import styled from 'styled-components/native';
@@ -49,9 +39,9 @@ const BookDetailsScreen =  createBookDetailsScreen({
     height: ${units.header}px;
   `,
   Summary: styled(Summary)
-    `
-      padding: 0 15px;
-    `
+  `
+    padding: 0 15px;
+  `
 });
 
 export default inject('details')(observer(BookDetailsScreen));
