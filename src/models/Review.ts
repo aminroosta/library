@@ -18,13 +18,17 @@ export class Review {
   @json @observable id = '';
   @json @observable ratingAverage = 0;
   @json @observable ratingCount = 0;
+  @json @observable reviewCount = 0;
   @json @observable description = '';
+
+  @json @observable reviewsLink = '';
   @json readonly reviews = json.arrayOf(ReviewItem)
 
   public static async getByTitle(title: string) {
     const key = `@Review/${title}`;
     const review = new Review();
     let cache = await AsyncStorage.getItem(key);
+    cache = null;
     if(cache !== null) {
       const data = JSON.parse(cache);
       json.load(review, data);

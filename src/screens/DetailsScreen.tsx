@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Book} from '../models/Book'
 import {Dimensions} from 'react-native';
 import {inject, observer} from 'mobx-react';
-import {colors, defaultNavigatorStyle} from '../common/style';
+import {colors, defaultNavigatorStyle, HEIGHT} from '../common/style';
 import styled from 'styled-components/native';
 import DetailsHeader from '../components/DetailsHeader';
 import Summary from '../components/Summary';
@@ -21,7 +21,6 @@ const createBookDetailsScreen =
     );
 };
 
-const HEIGHT = Dimensions.get('window').height;
 const units = {
   navbar: defaultNavigatorStyle.navBarHeight,
   header: (HEIGHT * 0.35 | 0) + defaultNavigatorStyle.navBarHeight,

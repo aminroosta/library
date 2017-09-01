@@ -1,4 +1,4 @@
-import { Platform } from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 
 export const colors = {
   background: '#FFFFFF',
@@ -18,3 +18,5 @@ export const defaultNavigatorStyle = {
 };
 
 export const fontFamily = Platform.OS === 'ios' ? 'System' : 'Roboto';
+export const HEIGHT = Dimensions.get('window').height;
+export const WIDTH = Dimensions.get('window').width;
