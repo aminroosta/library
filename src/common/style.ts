@@ -5,6 +5,8 @@ export const colors = {
   selected: '#DA0457',
   unselected: '#D8D8D8',
   button: '#FFBD30',
+  buttonDarker: '#E6A417',
+  black: '#000000',
 }
 
 export const defaultNavigatorStyle = {
