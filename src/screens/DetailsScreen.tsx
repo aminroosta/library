@@ -5,12 +5,8 @@ import {inject, observer} from 'mobx-react';
 import {colors, defaultNavigatorStyle, HEIGHT} from '../common/style';
 import styled from 'styled-components/native';
 import DetailsHeader from '../components/DetailsHeader';
-import Summary from '../components/Summary';
-import Interactable from 'react-native-interactable';
-import {Text} from 'react-native';
+import Summary from '../components/Summary'; 
 
-
-let ins : React.Component<Interactable.IInteractableView, {}> = null;
 const createBookDetailsScreen =
   ({ScrollWrapper, Header, Summary}) => 
   ({details, style} : {details: Book, style?: object}) => {
@@ -20,20 +16,6 @@ const createBookDetailsScreen =
       <ScrollWrapper style={style}>
         <Header />
         <Summary value={description} />
-
-        <Interactable.View ref={i => { ins = i;}}
-          horizontalOnly={true}
-          style={{width: '100%'}}
-          snapPoints={[{x: 0}, {x: -200}]}>
-
-          <Text onPress={() => ins.snapTo({index:1})}
-          style={{
-            fontSize: 16, fontWeight: 'bold', backgroundColor: colors.button,
-            paddingLeft: 15, paddingBottom: 8
-          }}>Text</Text>
-
-        </Interactable.View>
-
       </ScrollWrapper>
     );
 };

@@ -6,6 +6,7 @@ import {observable, action, computed} from 'mobx';
 import {colors, fontFamily, HEIGHT} from '../common/style';
 import {styled} from '../common/utils';
 import HTMLView from './HtmlView';
+import Collapsible from 'react-native-collapsible';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -29,17 +30,19 @@ const Button = createButton({
 
 
 @observer
-export default class Summary extends Component<{value?: string, expanded?: boolean, style?: object}> {
+export default class Summary extends Component<{value?: string, style?: object}> {
   state = new state();
   render() {
     const {Wrapper, Title, Content, Shadow, Button} = views;
     const {value, style} = this.props;
-    const {expanded, buttonText, interpolatedHeight, toggle, onLayout} = this.state;
-    const showShadow = value && !expanded;
+    const {collapsed, buttonText, collapsedHeight, toggle} = this.state;
+    const showShadow = value && collapsed;
     return (
-     <Wrapper style={[style, {maxHeight: interpolatedHeight}]} onLayout={onLayout}>
+     <Wrapper style={style}>
         <Title>Synopsis</Title>
-        <Content value={value} />
+        <Collapsible collapsed={collapsed} collapsedHeight={collapsedHeight} easing={'linear'}>
+          <Content value={value} />
+        </Collapsible>
         {showShadow && <Shadow />}
         {value && <Button onPress={toggle} text={buttonText} /> }
      </Wrapper>
@@ -48,30 +51,15 @@ export default class Summary extends Component<{value?: string, expanded?: boole
 } 
 
 class state {
-  @observable expanded = false;
-
-  progress = new Animated.Value(0);
-
-  @observable maxHeight = HEIGHT*0.25 | 0;
-  minHeight = HEIGHT*0.25 | 0;
-
-  @action.bound
-  onLayout(event: LayoutChangeEvent) {
-    this.maxHeight = event.nativeEvent.layout.height;
-  }
-  @computed get interpolatedHeight() {
-    return this.progress.interpolate({ inputRange: [0, 1], outputRange: [this.minHeight, this.maxHeight]});
-  }
+  @observable collapsed = true;
+  collapsedHeight = HEIGHT*0.25 | 0;
 
   @computed get buttonText() {
-    return this.expanded ? 'Collapse' : 'Read More';
+    return this.collapsed ? 'Read More' : 'Collapse';
   };
 
   @action.bound toggle() {
-    this.expanded = !this.expanded;
-    Animated.spring(this.progress, {
-      toValue: this.expanded ? 1 : 0
-    }).start();
+    this.collapsed = !this.collapsed;
   };
 };
 
@@ -85,7 +73,9 @@ const views = {
     backgroundColor: colors.background,
     paddingBottom: 8
   }),
-  Content: styled(HTMLView)({}),
+  Content: styled(HTMLView)({
+    paddingBottom: 40,
+  }),
   Shadow: styled(LinearGradient)({
     position: 'absolute',
     height: '70%',
@@ -96,10 +86,10 @@ const views = {
     colors: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)', 'rgba(255,255,255,1)'],
     locations:[0, 0.8, 1]
   }),
-  Button: styled(Button)({
+  Button: styled(Button)<{}>({
     position: 'absolute',
     alignSelf: 'center',
-    bottom: 0,
+    bottom: 0
   })
 };
 
