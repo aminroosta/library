@@ -6,10 +6,10 @@ import {colors, fontFamily} from '../common/style';
 import StarsRating from './StarsRating';
 import DetailsHeaderBackground from './DetailsHeaderBackground';
 
-const createDetailsHeader = 
-  ({Background, Wrapper, ThumbnailImage, InfoWrapper, Title, Subtitle, StarsRating}) => 
-  ({ details, style }: {details?: Book, style?: object}) => {
-
+const DetailsHeader
+  : React.StatelessComponent<{details?: Book, style?: object}>
+  = ({ details, style }) => {
+   const {Background, Wrapper, ThumbnailImage, InfoWrapper, Title, Subtitle, StarsRating} = styles;
    const  { thumbnail, authors, categories, title, review } = details;
    return (
      <Background uri={thumbnail} style={style}>
@@ -26,51 +26,44 @@ const createDetailsHeader =
   );
 }
 
-const DetailsHeader = createDetailsHeader({
-  Background: styled(DetailsHeaderBackground)
-  `
+const styles = {
+  Background: styled(DetailsHeaderBackground)`
     border-width: 0;
   `,
-  Wrapper: styled.View
-  `
+  Wrapper: styled.View`
     flex: 1;
     background-color: transparent;
     flex-direction: row;
     align-items: flex-start;
     padding-top: 10%;
   `,
-  ThumbnailImage: styled.Image
-  `
+  ThumbnailImage: styled.Image`
     flex: 1;
     margin-left: 15px;
     height: 60%;
     aspect-ratio: 0.7;
     resize-mode: stretch;
   `,
-  InfoWrapper: styled.View
-  `
+  InfoWrapper: styled.View`
     flex: 2;
     flex-direction: column;
     justify-content: flex-start;
   `,
-  Title:  styled.Text
-  `
+  Title:  styled.Text`
     font-size: 20px;
     font-weight: bold;
     font-family:  ${fontFamily};
     color: ${colors.background};
   `,
-  Subtitle: styled.Text
-  `
+  Subtitle: styled.Text`
     font-size: 14px;
     opacity: 0.8;
     font-family:  ${fontFamily};
     color: ${colors.background};
   `,
-  StarsRating: styled(StarsRating)
+  StarsRating: styled(StarsRating)`
+    margin-top: 5px;
   `
-    margin-top: 5;
-  `
-});
+};
 
 export default inject('details')(observer(DetailsHeader));

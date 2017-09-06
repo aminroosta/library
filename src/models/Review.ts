@@ -3,7 +3,7 @@ import {GoodRead}  from '../api/api';
 import { json } from 'json-mobx';
 import {observable, computed} from 'mobx';
 
-export class ReviewItem {
+export class ReviewComment {
   @json @observable id = '';
   @json @observable userIcon = '';
   @json @observable name = '';
@@ -12,6 +12,29 @@ export class ReviewItem {
   @json @observable link = '';
   @json @observable body = '';
   dispose() { }
+  public static async getByUrl(url: string) {
+    const key = `@ReviewComment/${url}`;
+    let cache = await AsyncStorage.getItem(key);
+    cache = null;
+    if(cache !== null) {
+      const data : object[] = JSON.parse(cache);
+      const comments = data.map(d => {
+        const comment = new ReviewComment();
+        json.load(comment, d);
+        return comment;
+      });
+      return comments;
+    }
+    // Query the site if not cached yet.
+    const data = await GoodRead.comments(url);
+    await AsyncStorage.setItem(key, JSON.stringify(data));
+    const comments = data.map(d => {
+      const comment = new ReviewComment();
+      json.load(comment, d);
+      return comment;
+    });
+    return comments;
+  }
 };
 
 export class Review {
@@ -22,7 +45,15 @@ export class Review {
   @json @observable description = '';
 
   @json @observable reviewsLink = '';
-  @json readonly reviews = json.arrayOf(ReviewItem)
+  @observable private _comments?: ReviewComment[] = null;
+
+  @computed get comments() {
+    const url = this.reviewsLink;
+    if(this._comments)
+      return this._comments;
+    ReviewComment.getByUrl(url).then(comments => this._comments = comments);
+    return null;
+  }
 
   public static async getByTitle(title: string) {
     const key = `@Review/${title}`;

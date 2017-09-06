@@ -20,45 +20,45 @@ const mapNode = (node: CheerioElement, tags: object, keys: object) => {
   );
 }
 
-const createHTMLView =
-  ({P, B, I, Li, Br, A, Div, Wrapper}) =>
-  ({value, style} : {value:string, style?: object}) => {
-    const keys = {p: 0, b: 0, li: 0, br: 0, a: 0, i: 0, div: 0, root: 0};
-    const tags = {p: P, b: B, li: Li, br: Br, a: A, i: I, div: Div, root: Div};
+const HTMLView
+  : React.StatelessComponent<{value:string, style?: object}>
+  = ({value, style}) => {
+  const {P, B, I, Li, Br, A, Div, Wrapper} = styles;
+  const keys = {p: 0, b: 0, li: 0, br: 0, a: 0, i: 0, div: 0, root: 0};
+  const tags = {p: P, b: B, li: Li, br: Br, a: A, i: I, div: Div, root: Div};
 
-    let Content = (<Text>loading ...</Text>);
+  let Content = (<Text>loading ...</Text>);
 
-    if(value) {
-      const $ : CheerioStatic = cheerio.load(value);
-      Content = mapNode($.root().get(0), tags, keys);
-    }
+  if(value) {
+    const $ : CheerioStatic = cheerio.load(value);
+    Content = mapNode($.root().get(0), tags, keys);
+  }
 
-    return (
-      <Wrapper style={style}>
-        {Content}
-      </Wrapper>
-    );
+  return (
+    <Wrapper style={style}>
+      {Content}
+    </Wrapper>
+  );
 };
 
-const HTMLView = createHTMLView({
-  P:  ({key, children}) => (<Text key={key}>{children}{`\n`}</Text>),
-  Li: ({key, children}) => (<Text key={key}>{children}{`\n`}</Text>),
-  Br: () => (<Text>{`\n`}</Text>),
-  B: styled.Text `
-    font-weight: bold;
-  `,
-  I: styled.Text `
-    font-style: italic;
-  `,
+const styles = {
   A: styled.Text `
     color: skyblue; 
   `,
-  Div: styled.Text
-  ``,
-  Wrapper: styled.View
-  `
+  B: styled.Text`
+    font-weight: bold;
+  `,
+  Div: styled.Text`
+  `,
+  I: styled.Text`
+    font-style: italic;
+  `,
+  Wrapper: styled.View`
     background-color: ${colors.background};
-  `
-});
+  `,
+  Br: () => (<Text>{`\n`}</Text>),
+  P:  ({key, children}) => (<Text key={key}>{children}{`\n`}</Text>),
+  Li: ({key, children}) => (<Text key={key}>{children}{`\n`}</Text>),
+};
 
 export default HTMLView;

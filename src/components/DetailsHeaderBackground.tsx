@@ -4,35 +4,35 @@ import { Dimensions } from 'react-native';
 import {colors} from '../common/style';
 const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
 
-const createDetailsHeaderBackground =
-  ({Wrapper, BackgroundImage, Rectangle}) =>
-  ({uri, children, style} : {uri: string, children?: any, style?: object}) => (
+type Props = {uri: string, children?: any, style?: object};
 
+const DetailsHeaderBackground : React.StatelessComponent<Props> =
+  ({uri, children, style}) => {
+  const {Wrapper, BackgroundImage, Rectangle} = styles;
+  return (
     <Wrapper style={style}>
       <BackgroundImage source={{uri: uri, cache: 'force-cache'}} />  
       <Rectangle/>
       {children}
     </Wrapper>
-);
+  );
+}
 
-const DetailsHeaderBackground = createDetailsHeaderBackground({
-  Wrapper: styled.View
-  `
+const styles = {
+  Wrapper: styled.View`
     width: 100%;
     overflow: hidden;
     min-height: ${HEIGHT*0.33};
     top: -20px;
     margin-bottom: -20px;
   `,
-  BackgroundImage: styled.Image.attrs({blurRadius: 1})
-  `
+  BackgroundImage: styled.Image.attrs({blurRadius: 1})`
     position: absolute;
     width: 100%;
     aspect-ratio: 1;
     resize-mode: cover;
   `,
-  Rectangle: styled.View
-  `
+  Rectangle: styled.View`
     position: absolute;
     bottom: -20%;
     width: 120%;
@@ -40,6 +40,6 @@ const DetailsHeaderBackground = createDetailsHeaderBackground({
     background-color: ${colors.background};
     transform: rotate(10deg) translateX(${WIDTH*-0.1}px);
   `
-});
+};
 
 export default DetailsHeaderBackground;

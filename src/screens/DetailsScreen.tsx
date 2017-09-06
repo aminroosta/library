@@ -7,17 +7,19 @@ import styled from 'styled-components/native';
 import DetailsHeader from '../components/DetailsHeader';
 import Summary from '../components/Summary'; 
 
-const createBookDetailsScreen =
-  ({ScrollWrapper, Header, Summary}) => 
-  ({details, style} : {details: Book, style?: object}) => {
-    const review = details.review;
-    const description = review && review.description;
-    return (
-      <ScrollWrapper style={style}>
-        <Header />
-        <Summary value={description} />
-      </ScrollWrapper>
-    );
+const BookDetailsScreen
+  :  React.StatelessComponent<{details: Book, style?: object}>
+  = ({details, style}) => {
+  const {ScrollWrapper, Header, Summary} = styles;
+  const review = details.review;
+  const description = review && review.description;
+  const comments = review && review.comments;
+  return (
+    <ScrollWrapper style={style}>
+      <Header />
+      <Summary value={description} />
+    </ScrollWrapper>
+  );
 };
 
 const units = {
@@ -25,21 +27,18 @@ const units = {
   header: (HEIGHT * 0.35 | 0) + defaultNavigatorStyle.navBarHeight,
 };
 
-const BookDetailsScreen =  createBookDetailsScreen({
-  ScrollWrapper: styled.ScrollView.attrs({bounces: false})
-  `
+const styles = {
+  ScrollWrapper: styled.ScrollView.attrs({bounces: false})`
     flex: 1;
     background-color: ${colors.background};
   `,
-  Header: styled(DetailsHeader)
-  `
+  Header: styled(DetailsHeader)`
     padding-top: ${units.navbar}px;
     height: ${units.header}px;
   `,
-  Summary: styled(Summary)
-  `
+  Summary: styled(Summary)`
     padding: 0 15px;
   `
-});
+}
 
 export default inject('details')(observer(BookDetailsScreen));

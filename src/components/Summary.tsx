@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Animated, Text, LayoutChangeEvent} from 'react-native';
-// import styled from 'styled-components/native';
+import {Animated} from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import {observer, inject} from 'mobx-react';
 import {observable, action, computed} from 'mobx';
 import {colors, fontFamily, HEIGHT} from '../common/style';
-import {styled} from '../common/utils';
 import HTMLView from './HtmlView';
 import Collapsible from 'react-native-collapsible';
+import styled from 'styled-components/native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -19,28 +19,28 @@ const createButton =
 );
 
 const Button = createButton({
-  Wrapper: styled.TouchableHighlight({
-    backgroundColor: colors.button,
-    paddingHorizontal: 18,
-    paddingVertical: 8,
-    borderRadius: 17,
-  }, {underlayColor: colors.buttonDarker}),
-  Text: Text,
+  Wrapper: styled.TouchableHighlight.attrs({underlayColor: colors.buttonDarker})`
+    background-color: ${colors.button};
+    padding-horizontal: 18px;
+    padding-vertical: 8px;
+    border-radius: 17px;
+  `,
+  Text: styled.Text``
 });
-
 
 @observer
 export default class Summary extends Component<{value?: string, style?: object}> {
   state = new state();
   render() {
-    const {Wrapper, Title, Content, Shadow, Button} = views;
+    const a : Animatable.View = null;
+    const {Wrapper, Title, Content, Shadow, Button} = styles;
     const {value, style} = this.props;
     const {collapsed, buttonText, collapsedHeight, toggle} = this.state;
     const showShadow = value && collapsed;
     return (
-     <Wrapper style={style}>
+     <Wrapper style={style} easing={g => Math.pow(1.7, g)} transition='opacity'>
         <Title>Synopsis</Title>
-        <Collapsible collapsed={collapsed} collapsedHeight={collapsedHeight} easing={'linear'}>
+        <Collapsible collapsed={collapsed} collapsedHeight={collapsedHeight} easing={'linear'} duration={100}>
           <Content value={value} />
         </Collapsible>
         {showShadow && <Shadow />}
@@ -63,33 +63,34 @@ class state {
   };
 };
 
-const views = {
-  Wrapper: styled.AnimatedView<{}>({
-    overflow: 'hidden',
-  }),
-  Title: styled.Text({
-    fontSize: 16,
-    fontWeight: 'bold',
-    backgroundColor: colors.background,
-    paddingBottom: 8
-  }),
-  Content: styled(HTMLView)({
-    paddingBottom: 40,
-  }),
-  Shadow: styled(LinearGradient)({
-    position: 'absolute',
-    height: '70%',
-    left: 0,
-    right: 0,
-    bottom: 0,
-  },{
+const styles = {
+  Wrapper: styled(Animatable.View)`
+    overflow: hidden;
+    transform: rotate(7deg);
+  `,
+  Title: styled.Text`
+    font-size: 16px;
+    font-weight: bold;
+    background-color: ${colors.background};
+    padding-bottom: 8px;
+  `,
+  Content: styled(HTMLView)`
+    padding-bottom: 40px;
+  `,
+  Shadow: styled(LinearGradient).attrs({
     colors: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)', 'rgba(255,255,255,1)'],
     locations:[0, 0.8, 1]
-  }),
-  Button: styled(Button)<{}>({
-    position: 'absolute',
-    alignSelf: 'center',
-    bottom: 0
-  })
+  })`
+    position: absolute;
+    height: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  `,
+  Button: styled(Button)`
+    position: absolute;
+    align-self: center;
+    bottom: 0;
+  `
 };
 
