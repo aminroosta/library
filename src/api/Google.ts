@@ -1,4 +1,4 @@
-import {Book} from '../models/Book';
+import Book from '../models/Book';
 import {USER_AGENT} from '../common/constants';
 const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': USER_AGENT };
 

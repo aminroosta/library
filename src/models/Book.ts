@@ -3,8 +3,11 @@ import { Google } from '../api/api';
 import { json } from 'json-mobx';
 import {observable, computed} from 'mobx';
 
-export class Book {
-  // @json @observable id = observable('');
+export default class Book {
+  constructor(data = null) {
+    this.load(data);
+  }
+  @json @observable id = '';
   @json @observable kind = '';
   @json @observable title = '';
   @json @observable subtitle? = '';
@@ -28,9 +31,7 @@ export class Book {
     return null;
   }
 
-  static create(data: object) {
-    const book = new Book();
-    json.load(book, data);
-    return book;
+  load(data: object) {
+    data && json.load(this, data);
   }
 }

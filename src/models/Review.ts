@@ -1,5 +1,5 @@
 import { AsyncStorage } from 'react-native';
-import {GoodRead}  from '../api/api';
+import * as GoodRead from '../api/GoodRead';
 import { json } from 'json-mobx';
 import {observable, computed} from 'mobx';
 
