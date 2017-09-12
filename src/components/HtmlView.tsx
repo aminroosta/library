@@ -5,8 +5,8 @@ import {Text} from 'react-native';
 import cheerio from 'cheerio-without-node-native';
 
 const mapNode = (node: CheerioElement, tags: object, keys: object) => {
-  if(!node) return node;
-  if(node.type === "text")
+  if (!node) return node;
+  if (node.type === 'text')
     return node.nodeValue;
   const Tag = tags[node.tagName];
   const childs = node.children && node.children.map(element => mapNode(element, tags, keys));
@@ -18,7 +18,7 @@ const mapNode = (node: CheerioElement, tags: object, keys: object) => {
     {childs}
     </Tag>
   );
-}
+};
 
 const HTMLView
   : React.StatelessComponent<{value:string, style?: object}>
@@ -29,7 +29,7 @@ const HTMLView
 
   let Content = (<Text>loading ...</Text>);
 
-  if(value) {
+  if (value) {
     const $ : CheerioStatic = cheerio.load(value);
     Content = mapNode($.root().get(0), tags, keys);
   }

@@ -13,7 +13,7 @@ const DetailsHeader
   categories: string,
   title: string,
   rating: number,
-  style?: object
+  style?: object,
 }>
 = ({thumbnail, authors, categories, title, rating, style}) => (
   <Background uri={thumbnail} style={style}>
@@ -36,44 +36,43 @@ export default connect(
     categories: details.categories.join(', '),
     title: details.title,
     rating: details.review && details.review.ratingAverage || 0,
-  })
+  }),
 )(DetailsHeader);
 
-const // views
-Background = styled(DetailsHeaderBackground)`
+const Background = styled(DetailsHeaderBackground)`
   border-width: 0;
-`,
-Wrapper = styled.View`
+`;
+const Wrapper = styled.View`
   flex: 1;
   background-color: transparent;
   flex-direction: row;
   align-items: flex-start;
   padding-top: 10%;
-`,
-ThumbnailImage = styled.Image`
+`;
+const ThumbnailImage = styled.Image`
   flex: 1;
   margin-left: 15px;
   height: 60%;
   aspect-ratio: 0.7;
   resize-mode: stretch;
-`,
-InfoWrapper = styled.View`
+`;
+const InfoWrapper = styled.View`
   flex: 2;
   flex-direction: column;
   justify-content: flex-start;
-`,
-Title =  styled.Text`
+`;
+const Title =  styled.Text`
   font-size: 20px;
   font-weight: bold;
   font-family:  ${fontFamily};
   color: ${colors.background};
-`,
-Subtitle = styled.Text`
+`;
+const Subtitle = styled.Text`
   font-size: 14px;
   opacity: 0.8;
   font-family:  ${fontFamily};
   color: ${colors.background};
-`,
-UserRating = styled(StarsRating)`
+`;
+const UserRating = styled(StarsRating)`
   margin-top: 5px;
 `; 

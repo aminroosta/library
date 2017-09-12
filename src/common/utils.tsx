@@ -6,7 +6,7 @@ export const memoize = <T extends Function>(fn: T) : T => {
   const cache = { };
   const run : any = (...args) => {
     const key = JSON.stringify(args);
-    if(!cache[key]) {
+    if (!cache[key]) {
       cache[key] = fn(...args).catch(up => {
         delete cache[key];
         throw up;
@@ -15,8 +15,7 @@ export const memoize = <T extends Function>(fn: T) : T => {
     return cache[key];
   };
   return run as T;
-} 
-
+};
 
 /** ------------------------------------------------------------------------------------------ */
 const isFunction = (fn) => typeof(fn) === 'function';
@@ -69,7 +68,7 @@ export const connect : connect = mapStoresToProps => (WrappedComponent : any) =>
   // wrap the mapping function usually passed to mobx-react's inject method
   // so that it additionally unboxes any observables
   const unboxedMapStoresToProps = (stores, props, context) => {
-    let injectedProps = mapStoresToProps(stores, props, context);
+    const injectedProps = mapStoresToProps(stores, props, context);
     Object.assign(injectedProps, props);
     return unboxProps(injectedProps);
   };
@@ -87,11 +86,13 @@ export const connect : connect = mapStoresToProps => (WrappedComponent : any) =>
 
   return InjectedComponent;
 };
+
 type MapStoresToProps<T, P> = (stores: any, nextProps: P, context:any) => T;
 type ReactComponent<P> = React.StatelessComponent<P> | React.ComponentClass<P>;
 
 export type connect = {
   <T, P>(mapStoresToProps: MapStoresToProps<T, P>): (
-    <TFunction extends ReactComponent<T | P>>(target: TFunction) => React.StatelessComponent<P & Partial<T>>
-  )
-}
+    <TFunction extends ReactComponent<T | P>>
+    (target: TFunction) => React.StatelessComponent<P & Partial<T>>
+  ),
+};

@@ -1,9 +1,15 @@
 import Book from '../models/Book';
 import {USER_AGENT} from '../common/constants';
-const HEADERS = { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': USER_AGENT };
+const HEADERS = {
+  Accept: 'application/json',
+  'Content-Type': 'application/json',
+  'User-Agent': USER_AGENT,
+};
+
 
 const GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?orderBy=relevance&';
-const AMAZON_COMPLITION_URL = 'https://completion.amazon.com/search/complete?method=completion&mkt=1&search-alias=stripbooks&';
+const AMAZON_COMPLITION_URL
+= 'https://completion.amazon.com/search/complete?method=completion&mkt=1&search-alias=stripbooks&';
 
 export const search = async query => {
    const response = await fetch(`${GOOGLE_SEARCH_URL}q=${query}`, {
@@ -12,7 +18,7 @@ export const search = async query => {
    });
    
    const result = await response.json();
-   if(result.error || !result.items) {
+   if (result.error || !result.items) {
      return [];
    }
    const items : Book[] = result.items.map(book => {
@@ -34,7 +40,7 @@ export const search = async query => {
          thumbnail: thumbnail.replace('http://', 'https://'),
          isbn10: isbnInx10 !== -1 ? industryIdentifiers[isbnInx10].identifier : '',
          isbn13: isbnInx13 !== -1 ? industryIdentifiers[isbnInx13].identifier : '',
-      }
+      };
    });
    return items;
 };

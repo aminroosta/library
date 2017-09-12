@@ -1,5 +1,5 @@
 import { Navigation } from 'react-native-navigation';
-import { registerComponents } from './screens/screens'
+import { registerComponents } from './screens/screens';
 import * as constants from './common/constants';
 import {colors, defaultNavigatorStyle} from './common/style';
 
@@ -12,25 +12,25 @@ Navigation.startTabBasedApp({
 			screen: constants.BROWSE_SCREEN.screen, // this is a registered name for a screen
 			icon: require('../img/browse.png'),
 			title: 'Browse Screen',
-      navigatorStyle:  defaultNavigatorStyle
+      navigatorStyle:  defaultNavigatorStyle,
 		},
 		{
 			label: 'Home',
 			screen: constants.DETAILS_SCREEN.screen, // this is a registered name for a screen
 			icon: require('../img/home.png'),
 			title: 'Book Details',
-      navigatorStyle:  defaultNavigatorStyle
+      navigatorStyle:  defaultNavigatorStyle,
 		},
 	],
    tabsStyle: {
       tabBarButtonColor: colors.unselected,
       tabBarSelectedButtonColor: colors.selected,
-      tabBarBackgroundColor: colors.background
+      tabBarBackgroundColor: colors.background,
    },
    appStyle: {
-      orientation: 'portrait'
+      orientation: 'portrait',
    },
-   navigatorStyle:  defaultNavigatorStyle
+   navigatorStyle:  defaultNavigatorStyle,
 }); 
 
 

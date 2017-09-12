@@ -1,6 +1,6 @@
 import {
   BROWSE_SCREEN,
-  DETAILS_SCREEN
+  DETAILS_SCREEN,
 } from 'src/common/constants';
 import { Navigation } from 'react-native-navigation';
 import BrowseScreen from './browse/browse.ui';
@@ -12,7 +12,7 @@ import {latest} from '../api/database';
 
 const [book1, book2, book3] = latest;
 export const Stores = {
-   details:  new Book(book1),
+   details: new Book(book1),
    browse: new BrowseStore,
 };
 export type Stores = typeof Stores;

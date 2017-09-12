@@ -5,13 +5,15 @@ import styled from 'styled-components/native';
 import {connect} from '../../common/utils';
 import {Stores} from '../screens';
 
-const Browse : StatelessComponent<{
+const Browse
+: StatelessComponent<{
   onSearch: (text:string) => void,
   onAddManualy: Function,
   query: string,
   suggestions: string[],
-  isLoading: boolean
-}> = ({onSearch, onAddManualy, query, suggestions, isLoading}) => (
+  isLoading: boolean,
+}>
+= ({onSearch, onAddManualy, query, suggestions, isLoading}) => (
   <Container>
     <Query
       onChangeText={onSearch}
@@ -34,27 +36,26 @@ export default connect(
     onAddManualy: () => console.warn('onAddManualy'),
     query: browse.query,
     suggestions: browse.suggestions,
-    isLoading: false
-  })
+    isLoading: false,
+  }),
 )(Browse);
 
-const // views
-Container = styled.View `
+const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
   background-color: #F5FCFF;
-`,
-Query = styled.TextInput `
+`;
+const Query = styled.TextInput`
  align-self: stretch;
  height: 40px;
  margin: 0 20px;
-`,
-Button = styled.Button.attrs({title: 'Search'}) `
+`;
+const Button = styled.Button.attrs({title: 'Search'})`
   flex: 1;
   color: #841584;
-` as any,
-Instructions = styled.Text `
+` as any;
+const Instructions = styled.Text`
   text-align: center;
   color: #333333;
   margin-bottom: 5px;

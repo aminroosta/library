@@ -25,7 +25,7 @@ export default class Book {
 
   @computed get review() {
     const title = this.title;
-    if(this._review)
+    if (this._review)
       return this._review;
     Review.getByTitle(title).then(review => this._review = review);
     return null;

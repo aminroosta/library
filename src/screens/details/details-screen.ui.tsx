@@ -23,18 +23,17 @@ const units = {
 export default connect(
   ({details} : Stores) => ({
     description: details.review && details.review.description || 'Loading ...',
-  })
+  }),
 )(DetailsScreen);
 
-const //views
-ScrollWrapper = styled.ScrollView.attrs({bounces: false})`
+const ScrollWrapper = styled.ScrollView.attrs({bounces: false})`
   flex: 1;
   background-color: ${colors.background};
-`,
-Header = styled(DetailsHeader)`
+`;
+const Header = styled(DetailsHeader)`
   padding-top: ${units.navbar}px;
   height: ${units.header}px;
-`,
-BookSummary = styled(Summary)`
+`;
+const BookSummary = styled(Summary)`
   padding: 0 15px;
 `;

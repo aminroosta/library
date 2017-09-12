@@ -16,7 +16,7 @@ export class ReviewComment {
     const key = `@ReviewComment/${url}`;
     let cache = await AsyncStorage.getItem(key);
     cache = null;
-    if(cache !== null) {
+    if (cache !== null) {
       const data : object[] = JSON.parse(cache);
       const comments = data.map(d => {
         const comment = new ReviewComment();
@@ -49,7 +49,7 @@ export class Review {
 
   @computed get comments() {
     const url = this.reviewsLink;
-    if(this._comments)
+    if (this._comments)
       return this._comments;
     ReviewComment.getByUrl(url).then(comments => this._comments = comments);
     return null;
@@ -60,7 +60,7 @@ export class Review {
     const review = new Review();
     let cache = await AsyncStorage.getItem(key);
     cache = null;
-    if(cache !== null) {
+    if (cache !== null) {
       const data = JSON.parse(cache);
       json.load(review, data);
       return review;

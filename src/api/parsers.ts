@@ -7,11 +7,11 @@ export const parseSearchByQuery = xml => {
 
 export const parseGoodreadXml = xml => {
   const regex = /<!\[CDATA\[([\s\S]*?)\]\]>(?=\s*<)/gi;
-  let filteredXml = xml.replace(regex, '$1');
+  const filteredXml = xml.replace(regex, '$1');
   const $ : CheerioStatic = cheerio.load(filteredXml, {xmlMode: true});
 
   const err = $('error');
-  if(err.length) { throw new Error(err.text()); }
+  if (err.length) { throw new Error(err.text()); }
 
   const $book = $('book');
   const result : Review = {
@@ -21,7 +21,7 @@ export const parseGoodreadXml = xml => {
     ratingCount: $book.find('> rating_count').text() as any * 1,
     reviewCount: $book.find('> text_reviews_count').text() as any * 1,
     reviewsLink: $book.find('> reviews_widget #the_iframe').attr('src'),
-    comments: []
+    comments: [],
   };
   return result;
 };

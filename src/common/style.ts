@@ -7,7 +7,7 @@ export const colors = {
   button: '#FFBD30',
   buttonDarker: '#E6A417',
   black: '#000000',
-}
+};
 
 export const defaultNavigatorStyle = {
   navBarHidden: true,
