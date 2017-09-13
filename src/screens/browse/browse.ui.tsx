@@ -1,9 +1,9 @@
 import React, {Component, StatelessComponent} from 'react';
-import {observer, inject} from 'mobx-react/native';
-import BrowseStore from './browse.store';
+import {Keyboard} from 'react-native';
 import styled from 'styled-components/native';
-import {connect} from '../../common/utils';
-import {Stores} from '../screens';
+import {connect} from 'src/common/utils';
+import {Stores} from 'src/screens/screens';
+import BrowseHeader from 'src/screens/browse/browse-header.ui';
 
 const Browse
 : StatelessComponent<{
@@ -15,17 +15,18 @@ const Browse
 }>
 = ({onSearch, onAddManualy, query, suggestions, isLoading}) => (
   <Container>
+    <BrowseHeader />
     <Query
       onChangeText={onSearch}
       value={query}
     />
     <Button
-       onPress={() => onSearch(query)}
-       accessibilityLabel="Search"
+      onPress={() => onSearch(query)}
+      accessibilityLabel="Search"
      />
     <Instructions> To get started, enter book title and press Search! </Instructions>
     <Instructions>
-       {JSON.stringify(suggestions)}
+      {JSON.stringify(suggestions)}
     </Instructions>
   </Container>
 );
@@ -40,16 +41,20 @@ export default connect(
   }),
 )(Browse);
 
-const Container = styled.View`
+const Container = styled.ScrollView.attrs({
+  keyboardDismissMode: 'on-drag',
+  contentContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+} as any)`
   flex: 1;
-  justify-content: center;
-  align-items: center;
   background-color: #F5FCFF;
 `;
 const Query = styled.TextInput`
- align-self: stretch;
- height: 40px;
- margin: 0 20px;
+  align-self: stretch;
+  height: 40px;
+  margin: 0 20px;
 `;
 const Button = styled.Button.attrs({title: 'Search'})`
   flex: 1;

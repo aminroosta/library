@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import styled from 'styled-components/native';
-import {colors, WIDTH, HEIGHT} from 'src/common/style';
+import {colors, units} from 'src/common/style';
 
-const DetailsHeaderBackground
+const BackgroundImage
 : React.StatelessComponent<{uri: string, children?: any, style?: object}>
 = ({uri, children, style}) => (
   <Wrapper style={style}>
-    <BackgroundImage source={{uri, cache: 'force-cache'}} />  
+    <Image source={{uri, cache: 'force-cache'}} />  
     <Rectangle/>
     {children}
   </Wrapper>
@@ -15,11 +15,11 @@ const DetailsHeaderBackground
 const Wrapper = styled.View`
   width: 100%;
   overflow: hidden;
-  min-height: ${HEIGHT * 0.33};
+  min-height: ${20};
   top: -20px;
   margin-bottom: -20px;
 `;
-const BackgroundImage = styled.Image.attrs({blurRadius: 1})`
+const Image = styled.Image.attrs({blurRadius: 1})`
   position: absolute;
   width: 100%;
   aspect-ratio: 1;
@@ -31,7 +31,7 @@ const Rectangle = styled.View`
   width: 120%;
   height: 55%;
   background-color: ${colors.background};
-  transform: rotate(10deg) translateX(${WIDTH * -0.1}px);
+  transform: rotate(10deg) translateX(${units.windowWidth * -0.1}px);
 `;
 
-export default DetailsHeaderBackground;
+export default BackgroundImage;

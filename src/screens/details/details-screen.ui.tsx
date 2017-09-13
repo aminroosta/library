@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import DetailsHeader from 'src/screens/details/details-header.ui';
 import Summary from 'src/components/Summary'; 
 import {connect} from 'src/common/utils';
-import {colors, defaultNavigatorStyle, HEIGHT} from 'src/common/style';
+import {colors, units} from 'src/common/style';
 import {Stores} from 'src/screens/screens';
 
 const DetailsScreen
@@ -14,11 +14,6 @@ const DetailsScreen
     <BookSummary value={description} />
   </ScrollWrapper>
 );
-
-const units = {
-  navbar: defaultNavigatorStyle.navBarHeight,
-  header: (HEIGHT * 0.35 | 0) + defaultNavigatorStyle.navBarHeight,
-};
 
 export default connect(
   ({details} : Stores) => ({
@@ -31,8 +26,8 @@ const ScrollWrapper = styled.ScrollView.attrs({bounces: false})`
   background-color: ${colors.background};
 `;
 const Header = styled(DetailsHeader)`
-  padding-top: ${units.navbar}px;
-  height: ${units.header}px;
+  padding-top: ${units.navBarHeight}px;
+  height: ${units.detailsHeaderHeight}px;
 `;
 const BookSummary = styled(Summary)`
   padding: 0 15px;

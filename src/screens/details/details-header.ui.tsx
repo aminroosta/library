@@ -1,10 +1,10 @@
 import React, {StatelessComponent} from 'react';
 import styled from 'styled-components/native';
 import StarsRating from 'src/components/StarsRating';
-import DetailsHeaderBackground from 'src/screens/details/details-header-background.ui';
+import BackgroundImage from 'src/components/background-image';
 import {Stores} from 'src/screens/screens';
 import {connect} from 'src/common/utils';
-import {colors, fontFamily} from 'src/common/style';
+import {colors, fontFamily, units} from 'src/common/style';
 
 const DetailsHeader
 : StatelessComponent<{
@@ -39,8 +39,9 @@ export default connect(
   }),
 )(DetailsHeader);
 
-const Background = styled(DetailsHeaderBackground)`
+const Background = styled(BackgroundImage)`
   border-width: 0;
+  height: ${units.windowHeight * 0.33};
 `;
 const Wrapper = styled.View`
   flex: 1;
