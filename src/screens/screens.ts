@@ -3,16 +3,14 @@ import {
   DETAILS_SCREEN,
 } from 'src/common/constants';
 import { Navigation } from 'react-native-navigation';
-import BrowseScreen from './browse/browse.ui';
-import DetailsScreen from 'src/screens/details/details-screen.ui';
 import Provider from 'src/common/mobx-provider';
+import BrowseScreen from './browse/browse.ui';
+import DetailsScreen from 'src/screens/details/details.ui';
 import BrowseStore from 'src/screens/browse/browse.store';
-import Book from 'src/models/Book';
-import {latest} from '../api/database';
+import DetailsStore from 'src/screens/details/details.store';
 
-const [book1, book2, book3] = latest;
 export const Stores = {
-   details: new Book(book1),
+   details: DetailsStore,
    browse: new BrowseStore,
 };
 export type Stores = typeof Stores;

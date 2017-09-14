@@ -17,7 +17,7 @@ const DetailsScreen
 
 export default connect(
   ({details} : Stores) => ({
-    description: details.review && details.review.description || 'Loading ...',
+    description: details.review && details.review.description,
   }),
 )(DetailsScreen);
 

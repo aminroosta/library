@@ -52,7 +52,6 @@ class state {
 
 const Wrapper = styled(Animatable.View)`
   overflow: hidden;
-  transform: rotate(7deg);
 ` as any;
 const Title = styled.Text`
   font-size: 16px;
