@@ -2,7 +2,9 @@ import cheerio from 'cheerio-without-node-native';
 import {Review, ReviewComment} from '../models/Review';
 
 export const parseSearchByQuery = xml => {
+  console.warn(xml);
 
+  return [];
 };
 
 export const parseGoodreadXml = xml => {

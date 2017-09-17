@@ -1,40 +1,62 @@
 {
-	"name": "library",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"@types/cheerio": "^0.22.2",
-		"@types/lodash": "^4.14.71",
-		"@types/react": "^16.0.0",
-		"@types/react-native": "^0.47.0",
-		"cheerio-without-node-native": "^0.20.2",
-		"json-mobx": "^0.7.0",
-		"lodash": "^4.17.4",
-		"mobx": "^3.2.2",
-		"mobx-react": "^4.2.2",
-		"react": "16.0.0-alpha.12",
-		"react-native": "0.47.1",
-		"react-native-animatable": "^1.2.3",
-		"react-native-collapsible": "^0.9.0",
-		"react-native-interactable": "^0.1.3",
-		"react-native-linear-gradient": "^2.3.0",
-		"react-native-navigation": "latest",
-		"styled-components": "^2.1.2"
-	},
-	"devDependencies": {
-		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "^2.1.0",
-		"jest": "20.0.4",
-		"react-native-typescript-transformer": "^1.1.3",
-		"react-test-renderer": "16.0.0-alpha.12",
-		"tslint-config-airbnb": "^5.2.1",
-		"typescript": "^2.4.2"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "library",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.2",
+    "@types/lodash": "^4.14.71",
+    "@types/react": "^16.0.0",
+    "@types/react-native": "^0.47.0",
+    "cheerio-without-node-native": "^0.20.2",
+    "json-mobx": "^0.7.0",
+    "lodash": "^4.17.4",
+    "mobx": "^3.2.2",
+    "mobx-react": "^4.2.2",
+    "react": "^16.0.0-beta.5",
+    "react-native": "0.47.1",
+    "react-native-animatable": "^1.2.3",
+    "react-native-collapsible": "^0.9.0",
+    "react-native-interactable": "^0.1.3",
+    "react-native-linear-gradient": "^2.3.0",
+    "react-native-navigation": "latest",
+    "styled-components": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "^2.1.0",
+    "jest": "20.0.4",
+    "node-fetch": "^1.7.3",
+    "react-dom": "16.0.0-rc.3",
+    "react-native-typescript-transformer": "^1.1.3",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "ts-jest": "^21.0.1",
+    "tslint-config-airbnb": "^5.2.1",
+    "typescript": "^2.4.2"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "jest-tsconfig.json"
+      }
+    },
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "setupFiles": [ "./jest-setup.js" ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
 }
