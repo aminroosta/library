@@ -1,4 +1,4 @@
-import {getByQuery, getById} from '../../src/api/GoodRead';
+import {getByQuery, getById} from '../../src/api/goodread';
 
 it('getByQuery works', async () => {
   const data = await getByQuery('love');

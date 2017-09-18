@@ -1,5 +1,4 @@
 import cheerio from 'cheerio-without-node-native';
-import {Review, ReviewComment} from '../models/Review';
 import Book from '../../src/models/Book';
 
 export const parseGetByQuery = (xml : string) => {
@@ -107,7 +106,7 @@ export const parseGoodreadXml = xml => {
   if (err.length) { throw new Error(err.text()); }
 
   const $book = $('book');
-  const result : Review = {
+  const result = {
     id: $book.find('> id').text(),
     description: $book.find('> description').html().trim(),
     ratingAverage: $book.find('> average_rating').text() as any * 1,

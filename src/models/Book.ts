@@ -1,4 +1,4 @@
-import { Review } from '../models/Review';
+import { Review } from '../models/review';
 import { json } from 'json-mobx';
 import {observable, computed} from 'mobx';
 

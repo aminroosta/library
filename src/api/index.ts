@@ -1,5 +1,5 @@
 import * as utils from 'src/common/utils';
-import * as goodread from 'src/api/GoodRead';
+import * as goodread from 'src/api/goodread';
 import * as parsers from 'src/api/parsers';
 
 export const getByQuery = utils.memoize(async (query:string) => {

@@ -1,5 +1,5 @@
 import { AsyncStorage } from 'react-native';
-import * as GoodRead from '../api/GoodRead';
+import * as goodread from 'src/api/goodread';
 import { json } from 'json-mobx';
 import {observable, computed} from 'mobx';
 
@@ -26,7 +26,7 @@ export class ReviewComment {
       return comments;
     }
     // Query the site if not cached yet.
-    const data = await GoodRead.comments(url);
+    const data = await goodread.comments(url);
     await AsyncStorage.setItem(key, JSON.stringify(data));
     const comments = data.map(d => {
       const comment = new ReviewComment();
@@ -66,7 +66,7 @@ export class Review {
       return review;
     }
     // Query the site if not cached yet.
-    const data = await GoodRead.review(title);
+    const data = await goodread.review(title);
     await AsyncStorage.setItem(key, JSON.stringify(data));
     json.load(review, data);
     return review;
