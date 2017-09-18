@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should parse getById result 1`] = `
+Object {
+  "authors": Array [
+    Object {
+      "id": "11679",
+      "name": "Elizabeth Gilbert",
+      "smallThumbnail": "
+https://images.gr-assets.com/authors/1440718929p2/11679.jpg
+",
+      "thumbnail": "
+https://images.gr-assets.com/authors/1440718929p5/11679.jpg
+",
+    },
+  ],
+  "description": "Elizabeth Gilbert’s Eat Pray Love touched the world and changed countless lives, inspiring and empowering millions of readers to search for their own best selves. Now, this beloved and iconic book returns in a beautiful 10th anniversary edition, complete with an updated introduction from the author, to launch a whole new generation of fans. In her early thirties, Elizabeth Gilbert had everything a modern American woman was supposed to want—husband, country home, successful career—but instead of feeling happy and fulfilled, she was consumed by panic and confusion. This wise and rapturous book is the story of how she left behind all these outward marks of success, and set out to explore three different aspects of her nature, against the backdrop of three different cultures: pleasure in Italy, devotion in India, and on the Indonesian island of Bali, a balance between worldly enjoyment and divine transcendence.",
+  "id": "19501",
+  "isbn10": "0143038419",
+  "isbn13": "9780143038412",
+  "numPages": 334,
+  "publicationYear": "2006",
+  "publisher": "",
+  "ratingAverage": 3.51,
+  "ratingsCount": 1188057,
+  "reviewsCount": 45607,
+  "reviewsLink": "https://www.goodreads.com/api/reviews_widget_iframe?did=DEVELOPER_ID&format=html&isbn=0143038419&links=660&min_rating=&review_back=fff&stars=000&text=000",
+  "smallThumbnail": "https://images.gr-assets.com/books/1503066414s/19501.jpg",
+  "thumbnail": "https://images.gr-assets.com/books/1503066414m/19501.jpg",
+  "title": "Eat, Pray, Love",
+}
+`;
+
+exports[`should parse getByIframe result 1`] = `
+Array [
+  Object {
+    "body": "Wow, this book took me on a roller-coaster ride. I couldn&apos;t decide if I loved it or hated it and it seemed like every few pages I&apos;d go from thinking Gilbert was delightfully witty to thinking this was the most horribly self-absorbed person to ever set foot on the earth. <br><br>In the end the overall eff...",
+    "link": "https://www.goodreads.com/review/show/12928493?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Michalyn",
+    "rating": 3,
+    "timestamp": "January 26, 2008",
+  },
+  Object {
+    "body": "WHY? I cringe to think why so many women want to feel that this was a true spiritual journey. It was a pre-paid journey. The woman starts off with telling us over and over about how painful her divorce was, however she dismisses how it ever came to be that way. Leaving her audience only to guess...",
+    "link": "https://www.goodreads.com/review/show/14954479?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "MelissaS",
+    "rating": 0,
+    "timestamp": "February 08, 2008",
+  },
+  Object {
+    "body": "Eat Pray Love is the monologue of a Neurotic American Princess (&quot;Liz&quot;) in her mid thirties. The first few chapters background the rest of the book, a confessional that tells how she came to find her 8 year marriage distasteful, realised she wasn&apos;t keen on the next &apos;logical&apos; step which is apparent...",
+    "link": "https://www.goodreads.com/review/show/19705963?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Fiona",
+    "rating": 1,
+    "timestamp": "October 16, 2015",
+  },
+  Object {
+    "body": "Don&apos;t bother with this book.<br><br><br>It took me nearly a year to finish it. I was so disgusted by the writer&apos;s apparent lack of awareness of her own privilege, her trite observations, and the unbelievably shallow way in which she represents a journey initiated by grief, that I initially couldn&apos;t bear to r...",
+    "link": "https://www.goodreads.com/review/show/17315217?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Maria",
+    "rating": 1,
+    "timestamp": "March 08, 2008",
+  },
+  Object {
+    "body": "I am embarrassed to read this book in public. <br>The title and the flowery, pasta-y cover screams, &quot;I&apos;m a book that contains the relentless rants of a neurotic 34 year-old-woman.&quot;<br>So, I&apos;m afraid that the strangers on the Metro will think I identify with her.<br>But in the comfort of my own bed, I am tota...",
+    "link": "https://www.goodreads.com/review/show/5366828?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Cat",
+    "rating": 4,
+    "timestamp": "May 03, 2008",
+  },
+  Object {
+    "body": "So today I was watching TLC&apos;s <i>My Strange Addiction</i>, featuring a woman who had an addiction to using baby wipes. She used up to 500 of them a day, and that adds up to about 4,500,000 wipes since her addiction began.<br><br>The woman, Rhia, would use the wipes to clean herself because she had a learned fea...",
+    "link": "https://www.goodreads.com/review/show/168428667?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Kiki",
+    "rating": 1,
+    "timestamp": "September 22, 2016",
+  },
+  Object {
+    "body": "This was one of those books I will read over and over again. All those cynics out there who criticize Gilbert for writing a &quot;too cutesy&quot; memoir that seems beyond belief and who claim that she is selfish for leaving her responsibility are clearly missing the point. First, she did not write the boo...",
+    "link": "https://www.goodreads.com/review/show/21361163?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Amy",
+    "rating": 5,
+    "timestamp": "April 30, 2008",
+  },
+  Object {
+    "body": "I found this book unbelievably phoney.<br><br>I hated this so much that I got up early this morning to finish it and gave my copy to the library and honestly, I&apos;m not too proud of that.<br>To me it just felt so insincere that there&apos;s no chance I would have made it past the second chapter had it not been for...",
+    "link": "https://www.goodreads.com/review/show/77898161?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Simone",
+    "rating": 1,
+    "timestamp": "February 03, 2016",
+  },
+  Object {
+    "body": "<img src=\\"./getByIframe.index_files/696714._SY540_.png\\" width=\\"500\\" height=\\"1000\\" alt=\\"description\\" class=\\"gr-hostedUserImg\\"><br>Shallow, self-indulgent and mired in the sort of liberal American obsession with &quot;oriental&quot; exoticism that is uniquely offensive because it is treated as enobling by its purveyors. She treats the rest of the world as though it exists for the consumption of jaded, rich, white Americans and this bo...",
+    "link": "https://www.goodreads.com/review/show/125170192?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "[Name Redacted]",
+    "rating": 1,
+    "timestamp": "March 07, 2012",
+  },
+  Object {
+    "body": "<b> <br>&#x62A;&#x645; &#x628;&#x62D;&#x645;&#x62F; &#x627;&#x644;&#x644;&#x647; :)<br><br>14-septemper 2014<br>&#x648; &#x644;&#x645; &#x62A;&#x623;&#x62A;&#x646;&#x64A; &#x627;&#x644;&#x642;&#x62F;&#x631;&#x629; &#x62D;&#x62A;&#x64A; &#x64A;&#x648;&#x645;&#x646;&#x627; &#x647;&#x630;&#x627; &#x644;&#x623;&#x643;&#x62A;&#x628; &#x639;&#x646; &#x647;&#x630;&#x627; &#x627;&#x644;&#x639;&#x645;&#x644; &#x634;&#x64A;&#x626;&#x64B;&#x627; .<br><br> -------------------------------<br><br>&#x62D;&#x635;&#x644;&#x62A; &#x639;&#x644;&#x64A;&#x647;&#x627; &#x643;&#x647;&#x62F;&#x64A;&#x629; &#x644;&#x639;&#x64A;&#x62F; &#x645;&#x64A;&#x644;&#x627;&#x62F;&#x64A; &#x627;&#x644;&#x648;&#x627;&#x62D;&#x62F; &#x648; &#x627;&#x644;&#x639;&#x634;&#x631;&#x64A;&#x646;..<br><br>&#x637;&#x627;&#x644;&#x639;&#x62A; &#x627;&#x644;&#x62C;&#x645;&#x644;&#x629; &#x627;&#x644;&#x645;&#x633;&#x637;&#x648;&#x631;&#x629; &#x639;&#x644;&#x64A; &#x627;&#x644;&#x63A;&#x644;&#x627;&#x641;: &quot;&#x625;&#x644;&#x64A;&#x632;&#x627;&#x628;&#x64A;&#x62B; &#x62C;&#x64A;&#x644;&#x628;&#x631;&#x62A;&#x60C; &#x627;&#x645;&#x631;&#x623;&#x629; &#x62A;&#x628;&#x62D;&#x62B; &#x639;&#x646; &#x643;&#x644; &#x634;&#x626;&quot; .<br>&#x648; &#x62A;&#x62E;&#x64A;&#x644;&#x62A; &#x648;&#x62C;&#x647;&#x647;&#x627; &#x627;&#x644;&#x628;&#x627;&#x633;&#x645; &#x648; &#x647;&#x64A; &#x62A;&#x62E;&#x627;&#x637;&#x628;&#x646;&#x64A;&#x60C; &#x647;&#x644; &#x62A;&#x639;&#x631;&#x641;&#x64A;&#x646; &#x631;&#x64A;&#x646;&#x62F;&#x627; &#x643;&#x64A;...</b>",
+    "link": "https://www.goodreads.com/review/show/1054602673?utm_campaign=reviews&utm_medium=widget&utm_source=google",
+    "name": "Rinda",
+    "rating": 4,
+    "timestamp": "April 01, 2017",
+  },
+]
+`;
+
+exports[`should parse getByQuery result 1`] = `
+Array [
+  Object {
+    "author": Object {
+      "id": "11679",
+      "name": "Elizabeth Gilbert",
+    },
+    "id": "19501",
+    "ratingAverage": 3.51,
+    "smallThumbnail": "https://images.gr-assets.com/books/1503066414s/19501.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1503066414m/19501.jpg",
+    "title": "Eat, Pray, Love",
+  },
+  Object {
+    "author": Object {
+      "id": "13450",
+      "name": "Gabriel García Márquez",
+    },
+    "id": "9712",
+    "ratingAverage": 3.89,
+    "smallThumbnail": "https://images.gr-assets.com/books/1327124987s/9712.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1327124987m/9712.jpg",
+    "title": "Love in the Time of Cholera",
+  },
+  Object {
+    "author": Object {
+      "id": "622",
+      "name": "Gary Chapman",
+    },
+    "id": "23878688",
+    "ratingAverage": 4.23,
+    "smallThumbnail": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+    "thumbnail": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "The 5 Love Languages: The Secret to Love that Lasts",
+  },
+  Object {
+    "author": Object {
+      "id": "7116",
+      "name": "Cecelia Ahern",
+    },
+    "id": "366522",
+    "ratingAverage": 4.01,
+    "smallThumbnail": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+    "thumbnail": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "P.S. I Love You",
+  },
+  Object {
+    "author": Object {
+      "id": "6492",
+      "name": "Francine Rivers",
+    },
+    "id": "11422",
+    "ratingAverage": 4.49,
+    "smallThumbnail": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+    "thumbnail": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "Redeeming Love",
+  },
+  Object {
+    "author": Object {
+      "id": "5430144",
+      "name": "Colleen Hoover",
+    },
+    "id": "17788401",
+    "ratingAverage": 4.3,
+    "smallThumbnail": "https://images.gr-assets.com/books/1399179135s/17788401.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1399179135m/17788401.jpg",
+    "title": "Ugly Love",
+  },
+  Object {
+    "author": Object {
+      "id": "3980637",
+      "name": "Tina Reber",
+    },
+    "id": "8204005",
+    "ratingAverage": 4.04,
+    "smallThumbnail": "https://images.gr-assets.com/books/1327889844s/8204005.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1327889844m/8204005.jpg",
+    "title": "Love Unscripted (Love, #1)",
+  },
+  Object {
+    "author": Object {
+      "id": "2633",
+      "name": "Nicole Krauss",
+    },
+    "id": "3867",
+    "ratingAverage": 3.91,
+    "smallThumbnail": "https://images.gr-assets.com/books/1327911009s/3867.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1327911009m/3867.jpg",
+    "title": "The History of Love",
+  },
+  Object {
+    "author": Object {
+      "id": "8002",
+      "name": "John Grogan",
+    },
+    "id": "12691",
+    "ratingAverage": 4.12,
+    "smallThumbnail": "https://images.gr-assets.com/books/1308858322s/12691.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1308858322m/12691.jpg",
+    "title": "Marley and Me: Life and Love With the World's Worst Dog",
+  },
+  Object {
+    "author": Object {
+      "id": "151371",
+      "name": "Jenny Han",
+    },
+    "id": "15749186",
+    "ratingAverage": 4.11,
+    "smallThumbnail": "https://images.gr-assets.com/books/1372086100s/15749186.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1372086100m/15749186.jpg",
+    "title": "To All the Boys I've Loved Before (To All the Boys I've Loved Before, #1)",
+  },
+  Object {
+    "author": Object {
+      "id": "13370",
+      "name": "Emily Giffin",
+    },
+    "id": "2120652",
+    "ratingAverage": 3.7,
+    "smallThumbnail": "https://images.gr-assets.com/books/1361466590s/2120652.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1361466590m/2120652.jpg",
+    "title": "Love the One You're With",
+  },
+  Object {
+    "author": Object {
+      "id": "7116",
+      "name": "Cecelia Ahern",
+    },
+    "id": "147865",
+    "ratingAverage": 3.95,
+    "smallThumbnail": "https://images.gr-assets.com/books/1420732457s/147865.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1420732457m/147865.jpg",
+    "title": "Love, Rosie",
+  },
+  Object {
+    "author": Object {
+      "id": "6039100",
+      "name": "Robert Munsch",
+    },
+    "id": "310259",
+    "ratingAverage": 4.34,
+    "smallThumbnail": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+    "thumbnail": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "Love You Forever",
+  },
+  Object {
+    "author": Object {
+      "id": "805184",
+      "name": "Jennifer E. Smith",
+    },
+    "id": "10798416",
+    "ratingAverage": 3.8,
+    "smallThumbnail": "https://images.gr-assets.com/books/1337187623s/10798416.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1337187623m/10798416.jpg",
+    "title": "The Statistical Probability of Love at First Sight",
+  },
+  Object {
+    "author": Object {
+      "id": "7154109",
+      "name": "Ava Dellaira",
+    },
+    "id": "18140047",
+    "ratingAverage": 3.82,
+    "smallThumbnail": "https://images.gr-assets.com/books/1497096111s/18140047.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1497096111m/18140047.jpg",
+    "title": "Love Letters to the Dead",
+  },
+  Object {
+    "author": Object {
+      "id": "6542440",
+      "name": "Elif Shafak",
+    },
+    "id": "6642715",
+    "ratingAverage": 4.17,
+    "smallThumbnail": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+    "thumbnail": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "The Forty Rules of Love",
+  },
+  Object {
+    "author": Object {
+      "id": "3980637",
+      "name": "Tina Reber",
+    },
+    "id": "12647642",
+    "ratingAverage": 4.26,
+    "smallThumbnail": "https://images.gr-assets.com/books/1347242126s/12647642.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1347242126m/12647642.jpg",
+    "title": "Love Unrehearsed (Love, #2)",
+  },
+  Object {
+    "author": Object {
+      "id": "22159",
+      "name": "Jessica Park",
+    },
+    "id": "11096647",
+    "ratingAverage": 4.01,
+    "smallThumbnail": "https://images.gr-assets.com/books/1333821470s/11096647.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1333821470m/11096647.jpg",
+    "title": "Flat-Out Love (Flat-Out Love, #1)",
+  },
+  Object {
+    "author": Object {
+      "id": "1362751",
+      "name": "Francis Chan",
+    },
+    "id": "3206011",
+    "ratingAverage": 4.15,
+    "smallThumbnail": "https://images.gr-assets.com/books/1328763220s/3206011.jpg",
+    "thumbnail": "https://images.gr-assets.com/books/1328763220m/3206011.jpg",
+    "title": "Crazy Love: Overwhelmed by a Relentless God",
+  },
+  Object {
+    "author": Object {
+      "id": "15516",
+      "name": "Erich Segal",
+    },
+    "id": "73968",
+    "ratingAverage": 3.6,
+    "smallThumbnail": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+    "thumbnail": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "Love Story (Love Story, #1)",
+  },
+]
+`;
+
+exports[`should parse getReviewByUrl result 1`] = `Object {}`;

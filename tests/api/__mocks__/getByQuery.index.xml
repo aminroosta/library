@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[cBva9rmCra8a0M4TcfasA]]></key>
+    <method><![CDATA[search_index]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[love]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>213910</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.31</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">3352398</id>
+  <books_count type="integer">187</books_count>
+  <ratings_count type="integer">1213338</ratings_count>
+  <text_reviews_count type="integer">49820</text_reviews_count>
+  <original_publication_year type="integer">2006</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.51</average_rating>
+  <best_book type="Book">
+    <id type="integer">19501</id>
+    <title>Eat, Pray, Love</title>
+    <author>
+      <id type="integer">11679</id>
+      <name>Elizabeth Gilbert</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1503066414m/19501.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1503066414s/19501.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3285349</id>
+  <books_count type="integer">349</books_count>
+  <ratings_count type="integer">325233</ratings_count>
+  <text_reviews_count type="integer">15359</text_reviews_count>
+  <original_publication_year type="integer">1985</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.89</average_rating>
+  <best_book type="Book">
+    <id type="integer">9712</id>
+    <title>Love in the Time of Cholera</title>
+    <author>
+      <id type="integer">13450</id>
+      <name>Gabriel García Márquez</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1327124987m/9712.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1327124987s/9712.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">832090</id>
+  <books_count type="integer">150</books_count>
+  <ratings_count type="integer">197507</ratings_count>
+  <text_reviews_count type="integer">7710</text_reviews_count>
+  <original_publication_year type="integer">1990</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.23</average_rating>
+  <best_book type="Book">
+    <id type="integer">23878688</id>
+    <title>The 5 Love Languages: The Secret to Love that Lasts</title>
+    <author>
+      <id type="integer">622</id>
+      <name>Gary Chapman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2742631</id>
+  <books_count type="integer">166</books_count>
+  <ratings_count type="integer">285088</ratings_count>
+  <text_reviews_count type="integer">7122</text_reviews_count>
+  <original_publication_year type="integer">2003</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.01</average_rating>
+  <best_book type="Book">
+    <id type="integer">366522</id>
+    <title>P.S. I Love You</title>
+    <author>
+      <id type="integer">7116</id>
+      <name>Cecelia Ahern</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">820210</id>
+  <books_count type="integer">63</books_count>
+  <ratings_count type="integer">164278</ratings_count>
+  <text_reviews_count type="integer">9226</text_reviews_count>
+  <original_publication_year type="integer">1991</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.49</average_rating>
+  <best_book type="Book">
+    <id type="integer">11422</id>
+    <title>Redeeming Love</title>
+    <author>
+      <id type="integer">6492</id>
+      <name>Francine Rivers</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">24878172</id>
+  <books_count type="integer">47</books_count>
+  <ratings_count type="integer">117629</ratings_count>
+  <text_reviews_count type="integer">15399</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">8</original_publication_month>
+  <original_publication_day type="integer">5</original_publication_day>
+  <average_rating>4.30</average_rating>
+  <best_book type="Book">
+    <id type="integer">17788401</id>
+    <title>Ugly Love</title>
+    <author>
+      <id type="integer">5430144</id>
+      <name>Colleen Hoover</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1399179135m/17788401.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1399179135s/17788401.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">13051038</id>
+  <books_count type="integer">16</books_count>
+  <ratings_count type="integer">62519</ratings_count>
+  <text_reviews_count type="integer">3415</text_reviews_count>
+  <original_publication_year type="integer">2010</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">6</original_publication_day>
+  <average_rating>4.04</average_rating>
+  <best_book type="Book">
+    <id type="integer">8204005</id>
+    <title>Love Unscripted (Love, #1)</title>
+    <author>
+      <id type="integer">3980637</id>
+      <name>Tina Reber</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1327889844m/8204005.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1327889844s/8204005.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1882970</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">104105</ratings_count>
+  <text_reviews_count type="integer">9681</text_reviews_count>
+  <original_publication_year type="integer">2005</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.91</average_rating>
+  <best_book type="Book">
+    <id type="integer">3867</id>
+    <title>The History of Love</title>
+    <author>
+      <id type="integer">2633</id>
+      <name>Nicole Krauss</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1327911009m/3867.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1327911009s/3867.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14961</id>
+  <books_count type="integer">119</books_count>
+  <ratings_count type="integer">381666</ratings_count>
+  <text_reviews_count type="integer">13438</text_reviews_count>
+  <original_publication_year type="integer">2005</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.12</average_rating>
+  <best_book type="Book">
+    <id type="integer">12691</id>
+    <title>Marley and Me: Life and Love With the World's Worst Dog</title>
+    <author>
+      <id type="integer">8002</id>
+      <name>John Grogan</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1308858322m/12691.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1308858322s/12691.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">21442106</id>
+  <books_count type="integer">29</books_count>
+  <ratings_count type="integer">154314</ratings_count>
+  <text_reviews_count type="integer">17709</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">15</original_publication_day>
+  <average_rating>4.11</average_rating>
+  <best_book type="Book">
+    <id type="integer">15749186</id>
+    <title>To All the Boys I've Loved Before (To All the Boys I've Loved Before, #1)</title>
+    <author>
+      <id type="integer">151371</id>
+      <name>Jenny Han</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1372086100m/15749186.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1372086100s/15749186.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1470370</id>
+  <books_count type="integer">47</books_count>
+  <ratings_count type="integer">130334</ratings_count>
+  <text_reviews_count type="integer">4780</text_reviews_count>
+  <original_publication_year type="integer">2008</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.70</average_rating>
+  <best_book type="Book">
+    <id type="integer">2120652</id>
+    <title>Love the One You're With</title>
+    <author>
+      <id type="integer">13370</id>
+      <name>Emily Giffin</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1361466590m/2120652.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1361466590s/2120652.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3423015</id>
+  <books_count type="integer">166</books_count>
+  <ratings_count type="integer">79183</ratings_count>
+  <text_reviews_count type="integer">8274</text_reviews_count>
+  <original_publication_year type="integer">2004</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.95</average_rating>
+  <best_book type="Book">
+    <id type="integer">147865</id>
+    <title>Love, Rosie</title>
+    <author>
+      <id type="integer">7116</id>
+      <name>Cecelia Ahern</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1420732457m/147865.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1420732457s/147865.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">277308</id>
+  <books_count type="integer">54</books_count>
+  <ratings_count type="integer">163220</ratings_count>
+  <text_reviews_count type="integer">4330</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.34</average_rating>
+  <best_book type="Book">
+    <id type="integer">310259</id>
+    <title>Love You Forever</title>
+    <author>
+      <id type="integer">6039100</id>
+      <name>Robert Munsch</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">15464655</id>
+  <books_count type="integer">59</books_count>
+  <ratings_count type="integer">96401</ratings_count>
+  <text_reviews_count type="integer">9652</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">2</original_publication_day>
+  <average_rating>3.80</average_rating>
+  <best_book type="Book">
+    <id type="integer">10798416</id>
+    <title>The Statistical Probability of Love at First Sight</title>
+    <author>
+      <id type="integer">805184</id>
+      <name>Jennifer E. Smith</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1337187623m/10798416.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1337187623s/10798416.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">25484455</id>
+  <books_count type="integer">61</books_count>
+  <ratings_count type="integer">46475</ratings_count>
+  <text_reviews_count type="integer">6474</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.82</average_rating>
+  <best_book type="Book">
+    <id type="integer">18140047</id>
+    <title>Love Letters to the Dead</title>
+    <author>
+      <id type="integer">7154109</id>
+      <name>Ava Dellaira</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1497096111m/18140047.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1497096111s/18140047.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">19051480</id>
+  <books_count type="integer">85</books_count>
+  <ratings_count type="integer">74568</ratings_count>
+  <text_reviews_count type="integer">10285</text_reviews_count>
+  <original_publication_year type="integer">2010</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.17</average_rating>
+  <best_book type="Book">
+    <id type="integer">6642715</id>
+    <title>The Forty Rules of Love</title>
+    <author>
+      <id type="integer">6542440</id>
+      <name>Elif Shafak</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">17760917</id>
+  <books_count type="integer">13</books_count>
+  <ratings_count type="integer">42927</ratings_count>
+  <text_reviews_count type="integer">1854</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">14</original_publication_day>
+  <average_rating>4.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">12647642</id>
+    <title>Love Unrehearsed (Love, #2)</title>
+    <author>
+      <id type="integer">3980637</id>
+      <name>Tina Reber</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1347242126m/12647642.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1347242126s/12647642.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">16018629</id>
+  <books_count type="integer">27</books_count>
+  <ratings_count type="integer">52210</ratings_count>
+  <text_reviews_count type="integer">5126</text_reviews_count>
+  <original_publication_year type="integer">2011</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">11</original_publication_day>
+  <average_rating>4.01</average_rating>
+  <best_book type="Book">
+    <id type="integer">11096647</id>
+    <title>Flat-Out Love (Flat-Out Love, #1)</title>
+    <author>
+      <id type="integer">22159</id>
+      <name>Jessica Park</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1333821470m/11096647.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1333821470s/11096647.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3239458</id>
+  <books_count type="integer">44</books_count>
+  <ratings_count type="integer">110134</ratings_count>
+  <text_reviews_count type="integer">3050</text_reviews_count>
+  <original_publication_year type="integer">2008</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.15</average_rating>
+  <best_book type="Book">
+    <id type="integer">3206011</id>
+    <title>Crazy Love: Overwhelmed by a Relentless God</title>
+    <author>
+      <id type="integer">1362751</id>
+      <name>Francis Chan</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328763220m/3206011.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328763220s/3206011.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">816372</id>
+  <books_count type="integer">115</books_count>
+  <ratings_count type="integer">44927</ratings_count>
+  <text_reviews_count type="integer">2247</text_reviews_count>
+  <original_publication_year type="integer">1970</original_publication_year>
+  <original_publication_month type="integer">2</original_publication_month>
+  <original_publication_day type="integer">14</original_publication_day>
+  <average_rating>3.60</average_rating>
+  <best_book type="Book">
+    <id type="integer">73968</id>
+    <title>Love Story (Love Story, #1)</title>
+    <author>
+      <id type="integer">15516</id>
+      <name>Erich Segal</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+</GoodreadsResponse>

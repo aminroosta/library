@@ -10,12 +10,12 @@ import BrowseStore from 'src/screens/browse/browse.store';
 import DetailsStore from 'src/screens/details/details.store';
 
 export const Stores = {
-   details: DetailsStore,
-   browse: new BrowseStore,
+  details: DetailsStore,
+  browse: new BrowseStore,
 };
 export type Stores = typeof Stores;
 
 export const registerComponents = () => {
-   Navigation.registerComponent(BROWSE_SCREEN.screen, () => BrowseScreen, Stores, Provider);
-   Navigation.registerComponent(DETAILS_SCREEN.screen, () => DetailsScreen, Stores, Provider);
+  Navigation.registerComponent(BROWSE_SCREEN.screen, () => BrowseScreen, Stores, Provider);
+  Navigation.registerComponent(DETAILS_SCREEN.screen, () => DetailsScreen, Stores, Provider);
 };

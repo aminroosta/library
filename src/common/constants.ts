@@ -1,5 +1,5 @@
 export const DETAILS_SCREEN = {
-   screen: 'library.DetailsScreen',
+  screen: 'library.DetailsScreen',
 };
 
 export const BROWSE_SCREEN = {

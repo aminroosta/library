@@ -14,6 +14,10 @@
   version "4.14.71"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.71.tgz#0dc383f78981216ac76e2f2c3afd998e0450e4c1"
 
+"@types/node@^8.0.28":
+  version "8.0.28"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.28.tgz#86206716f8d9251cf41692e384264cbd7058ad60"
+
 "@types/react-native@^0.47.0":
   version "0.47.0"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.47.0.tgz#0424a201166136095bd403b4c7e6e5ee0a0b95e7"

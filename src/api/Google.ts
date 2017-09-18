@@ -25,8 +25,8 @@ export const search = async query => {
       const { id, kind, volumeInfo } = book;
 
       const { title, subtitle, authors, description,
-         industryIdentifiers, categories, publisher,
-         publishedDate, imageLinks } = volumeInfo;
+        industryIdentifiers, categories, publisher,
+        publishedDate, imageLinks } = volumeInfo;
 
       const { smallThumbnail, thumbnail } =  imageLinks;
 
@@ -34,12 +34,12 @@ export const search = async query => {
       const isbnInx13 = industryIdentifiers.findIndex(ind => ind.type === 'ISBN_13');
 
       return {
-         id, kind, title, subtitle, authors, publisher,
-         description, publishedDate, categories,
-         smallThumbnail: smallThumbnail.replace('http://', 'https://'),
-         thumbnail: thumbnail.replace('http://', 'https://'),
-         isbn10: isbnInx10 !== -1 ? industryIdentifiers[isbnInx10].identifier : '',
-         isbn13: isbnInx13 !== -1 ? industryIdentifiers[isbnInx13].identifier : '',
+        id, kind, title, subtitle, authors, publisher,
+        description, publishedDate, categories,
+        smallThumbnail: smallThumbnail.replace('http://', 'https://'),
+        thumbnail: thumbnail.replace('http://', 'https://'),
+        isbn10: isbnInx10 !== -1 ? industryIdentifiers[isbnInx10].identifier : '',
+        isbn13: isbnInx13 !== -1 ? industryIdentifiers[isbnInx13].identifier : '',
       };
    });
    return items;
@@ -51,7 +51,7 @@ export const complition = async (query) => {
       method: 'GET',
       headers: HEADERS,
    });
-   const result = await response.json();
+  const result = await response.json();
 
    return result[1] as string[];
 };
